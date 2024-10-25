@@ -54,7 +54,7 @@ const people = [
 
 const Speakers = () => {
   return (
-    <section className="py-32 px-8">
+    <section className="pt-32 px-8">
       <div className="flex flex-col items-center text-center">
         <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
           Our Expert Speakers

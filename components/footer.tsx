@@ -8,10 +8,15 @@ export default function Footer() {
       <div className=" mx-auto">
         <div className="flex justify-between gap-8 max-md:flex-col">
           <div className="md:col-span-2 md:w-1/3">
-            <h2 className="text-2xl  font-bold mb-4">Shadcnblocks</h2>
-            <p className=" mb-4">
-              A collection of 100+ responsive HTML templates for your startup
-              business or side project.
+            <img
+              src="https://www.indiahrsummit.com/wp-content/uploads/2024/09/HR-Logo-01.png"
+              className="max-w-64"
+              alt="logo"
+            />
+            <p className=" my-4">
+              The HR Leadership Summit 2024 will explore how new work models,
+              organization structures, hybrid workplaces and emerging HR
+              technologies. Organized By Synnex Group.
             </p>
             <div className="flex space-x-4">
               <a href="#" className=" hover:text-gray-500">

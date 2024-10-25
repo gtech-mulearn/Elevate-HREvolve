@@ -26,7 +26,7 @@ const Partners = () => {
     "https://www.indiahrsummit.com/wp-content/uploads/2023/12/Environics-1250-X-1250.jpg",
   ];
   return (
-    <div className="md:p-8 py-8 flex gap-5">
+    <div className="md:py-32 py-8 flex gap-5">
       <Marquee gradient={true} gradientColor="white" className="w-full">
         {partners.map((partner) => (
           <img
