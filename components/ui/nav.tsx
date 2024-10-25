@@ -194,11 +194,10 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <img
-                src="https://www.shadcnblocks.com/images/block/block-1.svg"
-                className="w-8"
+                src="https://www.indiahrsummit.com/wp-content/uploads/2024/09/HR-Logo-01.png"
+                className="max-w-64"
                 alt="logo"
               />
-              <span className="text-xl font-bold">Shadcn Blocks</span>
             </div>
             <Sheet>
               <SheetTrigger asChild>
@@ -211,11 +210,10 @@ const Navbar = () => {
                   <SheetTitle>
                     <div className="flex items-center gap-2">
                       <img
-                        src="https://www.shadcnblocks.com/images/block/block-1.svg"
-                        className="w-8"
+                        src="https://www.indiahrsummit.com/wp-content/uploads/2024/09/HR-Logo-01.png"
+                        className="max-w-64"
                         alt="logo"
                       />
-                      <span className="text-xl font-bold">Shadcn Blocks</span>
                     </div>
                   </SheetTitle>
                 </SheetHeader>
@@ -283,80 +281,6 @@ const Navbar = () => {
                   <a href="#" className="font-semibold">
                     Blog
                   </a>
-                </div>
-                <div className="border-t pt-4">
-                  <div className="grid grid-cols-2 justify-start">
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghost",
-                        }),
-                        "justify-start text-muted-foreground"
-                      )}
-                      href="#"
-                    >
-                      Press
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghost",
-                        }),
-                        "justify-start text-muted-foreground"
-                      )}
-                      href="#"
-                    >
-                      Contact
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghost",
-                        }),
-                        "justify-start text-muted-foreground"
-                      )}
-                      href="#"
-                    >
-                      Imprint
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghost",
-                        }),
-                        "justify-start text-muted-foreground"
-                      )}
-                      href="#"
-                    >
-                      Sitemap
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghost",
-                        }),
-                        "justify-start text-muted-foreground"
-                      )}
-                      href="#"
-                    >
-                      Legal
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: "ghost",
-                        }),
-                        "justify-start text-muted-foreground"
-                      )}
-                      href="#"
-                    >
-                      Cookie Settings
-                    </a>
-                  </div>
-                  <div className="mt-2 flex flex-col gap-3">
-                    <Button variant={"outline"}>Log in</Button>
-                    <Button>Sign up</Button>
-                  </div>
                 </div>
               </SheetContent>
             </Sheet>

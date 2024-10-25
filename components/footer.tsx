@@ -1,10 +1,11 @@
 "use client";
-
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { BsTwitterX } from "react-icons/bs";
+import { FaFacebookF, FaLinkedin } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <footer className=" py-12 sm:px-6 lg:px-32">
+    <footer className=" py-12 px-8 lg:px-32">
       <div className=" mx-auto">
         <div className="flex justify-between gap-8 max-md:flex-col">
           <div className="md:col-span-2 md:w-1/3">
@@ -21,19 +22,19 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a href="#" className=" hover:text-gray-500">
                 <span className="sr-only">Instagram</span>
-                <Instagram className="h-6 w-6" />
+                <IoLogoInstagram className="h-6 w-6" />
               </a>
               <a href="#" className=" hover:text-gray-500">
                 <span className="sr-only">Facebook</span>
-                <Facebook className="h-6 w-6" />
+                <FaFacebookF className="h-6 w-6" />
               </a>
               <a href="#" className=" hover:text-gray-500">
                 <span className="sr-only">Twitter</span>
-                <Twitter className="h-6 w-6" />
+                <BsTwitterX className="h-6 w-6" />
               </a>
               <a href="#" className=" hover:text-gray-500">
                 <span className="sr-only">LinkedIn</span>
-                <Linkedin className="h-6 w-6" />
+                <FaLinkedin className="h-6 w-6" />
               </a>
             </div>
           </div>

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Landing = () => {
   return (
-    <section className="p-8 px-16">
+    <section className="p-8 md:px-16">
       <div className="">
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
