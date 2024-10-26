@@ -14,21 +14,16 @@ const About = () => {
           />
           <div className="lg:p-10">
             <h2 className="text-balance text-2xl font-bold md:text-4xl ">
-              Built with the latest technology stack
+              WHAT IS ELEVATE?
             </h2>
             <p className="mt-1 text-muted-foreground md:mt-6">
-              The India HR Summit 2024 (IHRS2024) is the most prestigious annual
-              conference on human resources for top executives and HR
-              professionals in India organized By Synnex Group.
-            </p>
-
-            <p className="mt-1 text-muted-foreground md:mt-6">
-              It is a non-profit and self-funded event for HR professionals to
-              keep abreast with the trends, best practices and to strengthen
-              their network. India HR Summit 2024” with the theme “Moving
-              Towards the Next Gen HR” seeks to provide a platform for industry
-              stakeholders to work out a road map for unleashing the true
-              potential of the Business.
+              It's a high-profile HR conclave designed to bring together
+              over 250 HR professionals, CEOs, and business leaders.
+              The event aims to redefine human resource practices and
+              explore strategies for shaping future-ready HR solutions.
+              An opportunity to foster connections, inspire innovation,
+              and transform the way HR operates in today's dynamic
+              workplace.
             </p>
 
             <div className="flex mt-6 gap-5">
