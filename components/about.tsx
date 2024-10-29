@@ -14,16 +14,16 @@ const About = () => {
           />
           <div className="lg:p-10">
             <h2 className="text-balance text-2xl font-bold md:text-4xl ">
-              WHAT IS ELEVATE?
+              About HR Evolve
             </h2>
             <p className="mt-1 text-muted-foreground md:mt-6">
-              It's a high-profile HR conclave designed to bring together
-              over 250 HR professionals, CEOs, and business leaders.
-              The event aims to redefine human resource practices and
-              explore strategies for shaping future-ready HR solutions.
-              An opportunity to foster connections, inspire innovation,
-              and transform the way HR operates in today's dynamic
-              workplace.
+              HR Evolve is a dynamic, common community for HR professionals
+              committed to improving the future of human resources. We honor the
+              most practiced trends, strategies, and technologies through
+              monthly sessions led by experts that provide members with
+              practical insights to improve their workplaces. Join us to
+              network, learn, and grow with leaders and contemporaries similarly
+              passionate about reshaping HR.
             </p>
 
             <div className="flex mt-6 gap-5">

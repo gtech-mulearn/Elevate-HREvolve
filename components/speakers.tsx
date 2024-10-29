@@ -19,6 +19,7 @@ const Speakers = () => {
               height={500}
               src={`/speakeres/${i + 1}.jpg`}
               className="rounded-lg w-full md:w-[50vw]"
+              draggable={false}
             ></Image>
           ))}
       </div>

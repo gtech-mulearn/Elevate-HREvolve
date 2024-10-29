@@ -8,7 +8,6 @@ const Partners = () => {
     "https://www.indiahrsummit.com/wp-content/uploads/2024/04/Web-Sponsor-1250x1250-04.jpg",
     "https://www.indiahrsummit.com/wp-content/uploads/2024/06/LT-Edutech-1.jpg",
     "https://www.indiahrsummit.com/wp-content/uploads/2024/05/Remote-1.jpg",
-    "https://www.indiahrsummit.com/wp-content/uploads/2024/05/Remote-1.jpg",
     "https://www.indiahrsummit.com/wp-content/uploads/2024/04/Web-Sponsor-1250x1250-1.jpg",
     "https://www.indiahrsummit.com/wp-content/uploads/2024/06/Nexiara-1250x1250-1.jpg",
     "https://www.indiahrsummit.com/wp-content/uploads/2023/12/ESDS-1250-X-1250.jpg",

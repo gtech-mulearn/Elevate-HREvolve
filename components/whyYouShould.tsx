@@ -2,12 +2,31 @@ import { CalendarRange } from "lucide-react";
 
 const WhyYouShould = () => {
   const data = [
-    "The Biggest & Most Prestigious HR Summit & Awards in India",
-    "Meet everyone who can help your HR Tech ideas grow.",
-    "How HR leaders can best address challenges at Work?",
-    "Experts Speaker In The Field",
-    "An Exclusive Startup Zone",
-    "Generate Sales Leads",
+    {
+      title: "Stay in the know",
+      description:
+        "Learn from the latest human resource trends, strategies, and technologies shaping the industry.",
+    },
+    {
+      title: "Actionable Strategies",
+      description:
+        "Walk away with ideas you can put into place tomorrow to tackle real-world HR issues and improve workplace practices.",
+    },
+    {
+      title: "Meet and Network",
+      description:
+        "Network with industry experts, C-level peers, and thought leaders that drive HR innovation.",
+    },
+    {
+      title: "Discover the Next Generation of Tools",
+      description:
+        "Get up close with the next generation of HR tech and solutions that enable better, more efficient workplaces.",
+    },
+    {
+      title: "Community Growth",
+      description:
+        "Multiply these efforts with a friendly community networking around the future of HR and professional development.",
+    },
   ];
   return (
     <section className="px-16 pt-16 w-full">
@@ -17,25 +36,20 @@ const WhyYouShould = () => {
         </h2>
       </div>
       <div className=" mt-16 flex gap-8 flex-wrap justify-center">
-        {/* {people.map((person) => (
-          <div key={person.id} className="flex flex-col items-center">
-            <Avatar className="mb-4 size-20 border md:mb-5 lg:size-24">
-              <AvatarImage src={person.avatar} />
-              <AvatarFallback>{person.name}</AvatarFallback>
-            </Avatar>
-            <p className="text-center font-medium">{person.name}</p>
-            <p className="text-center text-muted-foreground">{person.role}</p>
-          </div>
-        ))} */}
-        {data.map((item) => (
+        {data.map((item, index) => (
           <div
-            key={item}
-            className="flex flex-col justify-between gap-24 items-center  max-w-60 bg-gray-100 p-8 rounded-lg"
+            key={index}
+            className="flex flex-col justify-between gap-24 items-center  max-w-72 bg-gray-100 p-8 rounded-lg shadow-xl"
           >
-            <CalendarRange size={50} />
+            <div className="flex flex-col justify-center items-center gap-3">
+              <CalendarRange size={50} />
+              <p className="text-center align-text-top text-lg font-bold ">
+                {item.title}
+              </p>
+            </div>
 
             <p className="text-center align-text-top text-lg font-medium">
-              {item}
+              {item.description}
             </p>
           </div>
         ))}
