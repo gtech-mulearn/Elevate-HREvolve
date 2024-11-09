@@ -3,12 +3,54 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const Landing = () => {
   const container = useRef(null!);
   const landing_container = useRef(null!);
+  const topSvgRef = useRef(null);
+  const bottomSvgRef = useRef(null);
+
+  const toggleScroll = (enable: boolean) => {
+    document.body.style.overflow = enable ? "auto" : "hidden";
+  };
+
   useGSAP(
     () => {
+      gsap.registerPlugin(ScrollTrigger);
+      const topSvg = topSvgRef.current;
+      const bottomSvg = bottomSvgRef.current;
+      if (topSvg && bottomSvg) {
+        gsap.to(topSvg, {
+          yPercent: 50,
+          ease: "none",
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: 1,
+          },
+        });
+
+        gsap.to(bottomSvg, {
+          yPercent: -50,
+          ease: "none",
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: 1,
+          },
+        });
+      }
+    },
+    { scope: landing_container }
+  );
+
+  useGSAP(
+    () => {
+      toggleScroll(false);
+
       const tl = gsap.timeline({
         defaults: {
           duration: 1,
@@ -58,6 +100,7 @@ const Landing = () => {
           ease: "power4.out",
           duration: 1.5,
           onComplete: () => {
+            toggleScroll(true);
             landing_animation();
           },
         });
@@ -141,6 +184,7 @@ const Landing = () => {
         className="min-h-screen flex gap-5 justify-center items-center flex-col relative"
       >
         <svg
+          ref={topSvgRef}
           width="342"
           height="594"
           viewBox="0 0 342 594"
@@ -168,6 +212,7 @@ const Landing = () => {
         </svg>
 
         <svg
+          ref={bottomSvgRef}
           width="300"
           height="580"
           viewBox="0 0 300 580"

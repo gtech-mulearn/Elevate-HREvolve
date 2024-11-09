@@ -9,10 +9,10 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
 
     if (difference > 0) {
       timeLeft = {
-        D: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        H: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        M: Math.floor((difference / 1000 / 60) % 60),
-        S: Math.floor((difference / 1000) % 60),
+        Days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        Hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        Minutes: Math.floor((difference / 1000 / 60) % 60),
+        Seconds: Math.floor((difference / 1000) % 60),
       };
     }
 
@@ -32,21 +32,19 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
   return (
     <div className="w-full flex justify-center py-12">
       {Object.keys(timeLeft).length > 0 ? (
-        <div className="flex space-x-4 text-center">
+        <div className="flex md:space-x-4 space-x-2 text-center">
           {Object.entries(timeLeft).map(([unit, value]) => (
             <div
               key={unit}
-              className="flex items-center justify-center bg-gray-800 text-white rounded-lg p-4 shadow-lg"
+              className="flex flex-col items-center justify-center bg-[rgba(60,60,60,1)] text-white rounded-lg md:p-4 p-2 shadow-2xl w-24 md:w-36 shadow-[#242323]"
             >
               <NumberFlow
                 value={value}
                 format={{ notation: "compact" }} // Intl.NumberFormat options
                 locales="en-US" // Intl.NumberFormat locales
-                className="md:text-6xl text-4xl font-bold"
+                className="md:text-6xl text-3xl font-bold"
               />
-              <span className="block mt-2 md:text-2xl text-xl text-gray-400">
-                {unit}
-              </span>
+              <span className="block md:text-2xl text-lg">{unit}</span>
             </div>
           ))}
         </div>

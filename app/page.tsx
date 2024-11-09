@@ -1,6 +1,7 @@
 import About from "@/components/about";
 import Footer from "@/components/footer";
 import Landing from "@/components/landing";
+import Location from "@/components/location";
 import Partners from "@/components/partners";
 import Speakers from "@/components/speakers";
 import Countdown from "@/components/ui/countdown";
@@ -17,6 +18,7 @@ export default function Home() {
       <WhyYouShould />
       <Speakers />
       <Partners />
+      <Location />
       <Footer />
     </div>
   );
