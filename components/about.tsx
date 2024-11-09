@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <section className="py-32 md:px-16 px-8">
+    <section className=" md:px-16 px-8 py-12">
       <div className="">
         <div className="flex flex-col gap-12 md:flex-row">
           <img
