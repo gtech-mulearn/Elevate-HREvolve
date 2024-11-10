@@ -40,10 +40,10 @@ const About = () => {
             className="max-h-96 w-full rounded-lg object-cover md:max-h-[500px] md:w-1/2"
           />
           <div className="lg:p-10">
-            <h2 className="text-balance text-2xl font-bold md:text-4xl ">
+            <h2 className="text-balance text-5xl font-american_Purpose md:text-7xl max-sm:text-4xl">
               About HR Evolve
             </h2>
-            <p className="mt-1 text-muted-foreground md:mt-6">
+            <p className="mt-1 text-muted-foreground md:mt-6 lg:text-xl text-base">
               HR Evolve is a dynamic, common community for HR professionals
               committed to improving the future of human resources. We honor the
               most practiced trends, strategies, and technologies through

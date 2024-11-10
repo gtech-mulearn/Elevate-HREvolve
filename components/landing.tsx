@@ -2,8 +2,9 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Image from "next/image";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
 
 const Landing = () => {
   const container = useRef(null!);
@@ -245,17 +246,9 @@ const Landing = () => {
             shaping the future
           </span>
         </h1>
-        <p className="text-xl font-semibold font-sans translate-y-14 opacity-0">
-          Organized by
-        </p>
-        <Image
-          src={"/oraganize.png"}
-          width={300}
-          height={300}
-          draggable={false}
-          alt="Organized by"
-          className="mt-20 md:w-[15vw] w-[50vw] translate-y-14 opacity-0"
-        ></Image>
+        <Button className={cn("text-xl p-8 mt-12 bg-[#333333]")}>
+          Register Now
+        </Button>
       </div>
     </section>
   );

@@ -61,6 +61,7 @@ const WhyYouShould = () => {
         },
         yPercent: 25,
         duration: 1,
+        ease: "power2.inOut",
       });
       gsap.to(text, {
         scrollTrigger: {
@@ -72,6 +73,7 @@ const WhyYouShould = () => {
         },
         yPercent: -50,
         duration: 1,
+        ease: "power2.inOut",
       });
     });
   });
@@ -79,7 +81,7 @@ const WhyYouShould = () => {
   return (
     <section ref={container} className="px-16 pt-16 w-full">
       <div className="flex flex-col items-center text-center">
-        <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
+        <h2 className="my-6 text-pretty font-american_Purpose text-5xl md:text-7xl max-sm:text-4xl">
           Why You Should Attend
         </h2>
       </div>
@@ -88,17 +90,19 @@ const WhyYouShould = () => {
           <div
             key={i}
             className={cn(
-              "flex justify-between items-end elem-container container",
+              "flex justify-between gap-5 items-end elem-container container",
               {
                 "flex-row-reverse": i % 2 === 0,
               }
             )}
           >
             <div className="w-1/2 _text-content">
-              <h1 className="font-american_Purpose text-7xl mb-8">
+              <h1 className="font-american_Purpose xl:text-7xl lg:text-5xl text-3xl mb-8">
                 {item.title}
               </h1>
-              <div className="text-3xl tracking-tight">{item.description}</div>
+              <div className=" lg:text-3xl text-2xl tracking-tight">
+                {item.description}
+              </div>
             </div>
             <div className="overflow-y-clip">
               <Image
@@ -106,7 +110,7 @@ const WhyYouShould = () => {
                 alt="why attend"
                 width={500}
                 height={500}
-                className="rounded-lg _images"
+                className="rounded-lg _images max-lg:w-[40vw]"
                 draggable={false}
               ></Image>
             </div>
