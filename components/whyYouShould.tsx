@@ -1,56 +1,115 @@
-import { CalendarRange } from "lucide-react";
+"use client";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+
+type ContainerElement = Element & {
+  querySelector(selector: string): Element | null;
+};
 
 const WhyYouShould = () => {
   const data = [
     {
-      title: "Stay in the know",
+      title: "Build a Culture that Thrives",
       description:
-        "Learn from the latest human resource trends, strategies, and technologies shaping the industry.",
+        "Learn how to create high-performance cultures that align with strategic goals and boost employee engagement.",
     },
     {
-      title: "Actionable Strategies",
+      title: "Put Well-being at the Center",
       description:
         "Walk away with ideas you can put into place tomorrow to tackle real-world HR issues and improve workplace practices.",
     },
     {
-      title: "Meet and Network",
+      title: "Connect, Collaborate, and Grow",
       description:
-        "Network with industry experts, C-level peers, and thought leaders that drive HR innovation.",
+        "Network with industry leaders and build connections that fuel growth and innovation.",
     },
     {
-      title: "Discover the Next Generation of Tools",
+      title: "Walk Away with Real-World Solutions",
       description:
-        "Get up close with the next generation of HR tech and solutions that enable better, more efficient workplaces.",
+        "Take home strategies and toolkits ready for immediate implementation.",
     },
     {
-      title: "Community Growth",
+      title: "Create a Workplace Where People Thrive",
       description:
-        "Multiply these efforts with a friendly community networking around the future of HR and professional development.",
+        "Learn how to build inclusive, people-centered workplaces that empower individuals.",
+    },
+    {
+      title: "Be Part of HR's Evolution",
+      description:
+        "Contribute to shaping the future of HR by engaging in transformative discussions.",
     },
   ];
+
+  const container = useRef(null!);
+
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray<ContainerElement>(".elem-container").forEach((item) => {
+      const image = item.querySelector("._images");
+      const text = item.querySelector("._text-content");
+      gsap.to(image, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 30%",
+          end: "bottom 20%",
+          scrub: true,
+          // markers: true,
+        },
+        yPercent: 25,
+        duration: 1,
+      });
+      gsap.to(text, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: true,
+          // markers: true,
+        },
+        yPercent: -50,
+        duration: 1,
+      });
+    });
+  });
+
   return (
-    <section className="px-16 pt-16 w-full">
+    <section ref={container} className="px-16 pt-16 w-full">
       <div className="flex flex-col items-center text-center">
         <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
           Why You Should Attend
         </h2>
       </div>
       <div className=" mt-16 flex gap-8 flex-wrap justify-center">
-        {data.map((item, index) => (
+        {data.map((item, i) => (
           <div
-            key={index}
-            className="flex flex-col justify-between gap-24 items-center  max-w-72 bg-gray-100 p-8 rounded-lg shadow-xl"
+            key={i}
+            className={cn(
+              "flex justify-between items-end elem-container container",
+              {
+                "flex-row-reverse": i % 2 === 0,
+              }
+            )}
           >
-            <div className="flex flex-col justify-center items-center gap-3">
-              <CalendarRange size={50} />
-              <p className="text-center align-text-top text-lg font-bold ">
+            <div className="w-1/2 _text-content">
+              <h1 className="font-american_Purpose text-7xl mb-8">
                 {item.title}
-              </p>
+              </h1>
+              <div className="text-3xl tracking-tight">{item.description}</div>
             </div>
-
-            <p className="text-center align-text-top text-lg font-medium">
-              {item.description}
-            </p>
+            <div className="overflow-y-clip">
+              <Image
+                src={`/why/img${i + 1}.webp`}
+                alt="why attend"
+                width={500}
+                height={500}
+                className="rounded-lg _images"
+                draggable={false}
+              ></Image>
+            </div>
           </div>
         ))}
       </div>
