@@ -1,4 +1,4 @@
-import { MapPin, Clock, Calendar, Phone } from "lucide-react";
+import { MapPin, Clock, Calendar } from "lucide-react";
 
 const Location = () => {
   return (
@@ -15,9 +15,9 @@ const Location = () => {
               <div>
                 <h3 className="font-semibold text-lg">Venue</h3>
                 <p className="text-gray-600">
-                  India HR Summit & Awards 2024
+                  Travancore Hall Technopark ,
                   <br />
-                  Kerala, India
+                  Kazhakkoottam
                 </p>
               </div>
             </div>
@@ -26,7 +26,7 @@ const Location = () => {
               <Calendar className="w-5 h-5 mt-1 text-gray-600" />
               <div>
                 <h3 className="font-semibold text-lg">Date</h3>
-                <p className="text-gray-600">December 06, 2024</p>
+                <p className="text-gray-600">Thursday, November 21, 2024</p>
               </div>
             </div>
 
@@ -34,15 +34,7 @@ const Location = () => {
               <Clock className="w-5 h-5 mt-1 text-gray-600" />
               <div>
                 <h3 className="font-semibold text-lg">Time</h3>
-                <p className="text-gray-600">9:00 AM - 6:00 PM</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <Phone className="w-5 h-5 mt-1 text-gray-600" />
-              <div>
-                <h3 className="font-semibold text-lg">Contact</h3>
-                <p className="text-gray-600">+91 123 456 7890</p>
+                <p className="text-gray-600">09:00 AM - 21st Monday 06:30 PM</p>
               </div>
             </div>
           </div>

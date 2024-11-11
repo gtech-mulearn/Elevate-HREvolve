@@ -47,45 +47,10 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-
-          <div>
-            <h3 className="text-sm font-semibold  tracking-wider uppercase mb-4">
-              Company
-            </h3>
-            <ul className="space-y-4">
-              {["About", "Team", "Blog", "Careers"].map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-base text-gray-500 hover:text-gray-900"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-semibold  tracking-wider uppercase mb-4">
-              Resources
-            </h3>
-            <ul className="space-y-4">
-              {["Help", "Sales", "Advertise", "Privacy"].map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-base text-gray-500 hover:text-gray-900"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
         <div className="mt-8 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-base text-gray-400">
-            &copy; 2024 Shadcnblocks. All rights reserved.
+            &copy; Elevate 2024. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
