@@ -48,47 +48,50 @@ const WhyYouShould = () => {
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.utils
-        .toArray<ContainerElement>(".elem-container")
-        .forEach((item) => {
-          const image = item.querySelector("._images");
-          const text = item.querySelector("._text-content");
-          gsap.to(image, {
-            scrollTrigger: {
-              trigger: item,
-              start: "top 30%",
-              end: "bottom 20%",
-              scrub: true,
-              // markers: true,
-            },
-            yPercent: 25,
-            duration: 1,
-            ease: "power2.inOut",
+      const mm = gsap.matchMedia();
+      mm.add({ isNotMobile: "(min-width: 780px)" }, () => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils
+          .toArray<ContainerElement>(".elem-container")
+          .forEach((item) => {
+            const image = item.querySelector("._images");
+            const text = item.querySelector("._text-content");
+            gsap.to(image, {
+              scrollTrigger: {
+                trigger: item,
+                start: "top 30%",
+                end: "bottom 20%",
+                scrub: true,
+                // markers: true,
+              },
+              yPercent: 25,
+              duration: 1,
+              ease: "power2.inOut",
+            });
+            gsap.to(text, {
+              scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: true,
+                // markers: true,
+              },
+              yPercent: -50,
+              duration: 1,
+              ease: "power2.inOut",
+            });
           });
-          gsap.to(text, {
-            scrollTrigger: {
-              trigger: item,
-              start: "top 80%",
-              end: "bottom 20%",
-              scrub: true,
-              // markers: true,
-            },
-            yPercent: -50,
-            duration: 1,
-            ease: "power2.inOut",
-          });
+        gsap.to("svg", {
+          yPercent: 250,
+          ease: "none",
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top 50%",
+            end: "bottom top",
+            scrub: 1,
+            // markers: true,
+          },
         });
-      gsap.to("svg", {
-        yPercent: 250,
-        ease: "none",
-        scrollTrigger: {
-          trigger: container.current,
-          start: "top 50%",
-          end: "bottom top",
-          scrub: 1,
-          // markers: true,
-        },
       });
     },
     { scope: container }

@@ -96,7 +96,7 @@ const Landing = () => {
           "-=1.5"
         )
         .to(".E", { scale: 250, duration: 1.5, ease: "power4.out" }, "a")
-        .to(container.current, { background: "white", ease: "power4.out" }, "a")
+        .to(".loader", { background: "white", ease: "power4.out" }, "a")
         .to(".loader", {
           clipPath: "polygon(0 0, 100% 0%, 100% 0%, 0 0%)",
           ease: "power4.out",
