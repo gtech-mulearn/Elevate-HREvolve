@@ -95,7 +95,8 @@ const Landing = () => {
           },
           "-=1.5"
         )
-        .to(".E", { scale: 250, duration: 1.5, ease: "power4.out" })
+        .to(".E", { scale: 250, duration: 1.5, ease: "power4.out" }, "a")
+        .to(container.current, { background: "white", ease: "power4.out" }, "a")
         .to(".loader", {
           clipPath: "polygon(0 0, 100% 0%, 100% 0%, 0 0%)",
           ease: "power4.out",
@@ -111,7 +112,7 @@ const Landing = () => {
 
   const { contextSafe } = useGSAP({ scope: container });
 
-  const ani_words = ["nguage", "ncourage", "nhance", "volve"];
+  const ani_words = ["ngage", "ncourage", "nhance", "volve"];
   const landing_animation = contextSafe(() => {
     console.log("landing animation");
     const tl = gsap.timeline({ duration: 0.2, ease: "power2.out" });

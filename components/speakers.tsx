@@ -1,10 +1,35 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const Speakers = () => {
+  const people = [
+    {
+      name: "Aravind Warrier",
+      position: "HR Lead at Volvo India",
+    },
+    {
+      name: "Pratap G",
+      position: "Founder, Leadership experiences",
+    },
+    {
+      name: "Mohammed Rafi",
+      position: "Founder and Chief Mentor, Magic of change",
+    },
+    {
+      name: "Rajesh Padmanabhan",
+      position: "Chief People and Culture Officerat CoreStack",
+    },
+    {
+      name: "Biju Dominic",
+      position:
+        "Chief Evangelist, Fractal Analytics & Chairman, FinalMile Consulting",
+    },
+  ];
+
   return (
-    <section className="pt-32 px-8 relative">
+    <section className="py-32 px-8 relative">
       <div className="flex flex-col items-center text-center">
-        <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
+        <h2 className="my-6  font-american_Purpose text-5xl md:text-7xl max-sm:text-4xl">
           Our Expert Speakers
         </h2>
       </div>
@@ -35,20 +60,36 @@ const Speakers = () => {
         </defs>
       </svg>
 
-      <div className=" mt-16 grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-4">
-        {Array(8)
-          .fill(0)
-          .map((_, i) => (
+      <div className=" mt-32 flex gap-8 flex-wrap justify-center items-center">
+        {people.map((person, i) => (
+          <div key={i} className="relative group ">
             <Image
-              alt="speaker"
-              key={i}
-              width={500}
-              height={500}
-              src={`/speakeres/${i + 1}.jpg`}
-              className="rounded-lg w-full md:w-[50vw]"
+              alt="frame"
+              width={250}
+              height={250}
+              src={`/speakers/frame.webp`}
+              className="w-full xl:w-[16vw]"
               draggable={false}
             ></Image>
-          ))}
+            <Image
+              alt="frame"
+              width={500}
+              height={500}
+              src={`/speakers/speaker${i + 1}.webp`}
+              className={cn(
+                " w-[90%] absolute bottom-0 object-contain left-1/2 -translate-x-1/2 transform",
+                {
+                  "bottom-12": i === 0 || i === 2,
+                }
+              )}
+              draggable={false}
+            ></Image>
+            <div className="absolute left-2 bottom-2 h-[5rem] p-1 gap-1 flex flex-col text-center font-thin justify-center items-center bg-gradient-to-b from-[#333333] to-black w-[95%] rounded-sm text-white">
+              <h2 className="text-2xl font-bold">{person.name}</h2>
+              <p className="text-[0.7rem]">{person.position}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

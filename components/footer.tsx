@@ -9,11 +9,7 @@ export default function Footer() {
       <div className=" mx-auto relative z-10">
         <div className="flex justify-between gap-8 max-md:flex-col">
           <div className="md:col-span-2 md:w-1/3">
-            <img
-              src="https://www.indiahrsummit.com/wp-content/uploads/2024/09/HR-Logo-01.png"
-              className="max-w-64"
-              alt="logo"
-            />
+            <img src={"/logo.png"} className="max-w-64" alt="logo" />
             <p className=" my-4">
               The HR Leadership Summit 2024 will explore how new work models,
               organization structures, hybrid workplaces and emerging HR

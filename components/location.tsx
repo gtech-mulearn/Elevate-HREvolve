@@ -3,7 +3,7 @@ import { MapPin, Clock, Calendar, Phone } from "lucide-react";
 const Location = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center pb-12 relative">
-      <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
+      <h2 className="my-6 font-american_Purpose text-5xl md:text-7xl max-sm:text-4xl">
         Our Location
       </h2>
       <div className="container flex flex-col md:flex-row gap-8 justify-center items-center p-6">
