@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { BsTwitterX } from "react-icons/bs";
 import { FaFacebookF, FaLinkedin } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io";
@@ -16,22 +17,34 @@ export default function Footer() {
               technologies. Organized By Synnex Group.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className=" hover:text-gray-500">
+              <Link
+                href="https://www.instagram.com/hr_evolve/profilecard/?igsh=Y2R5MGNkOWJhempr"
+                className=" hover:text-gray-500"
+              >
                 <span className="sr-only">Instagram</span>
                 <IoLogoInstagram className="h-6 w-6" />
-              </a>
-              <a href="#" className=" hover:text-gray-500">
+              </Link>
+              <Link
+                href="https://www.facebook.com/profile.php?id=61568412845364&mibextid=ZbWKwL"
+                className=" hover:text-gray-500"
+              >
                 <span className="sr-only">Facebook</span>
                 <FaFacebookF className="h-6 w-6" />
-              </a>
-              <a href="#" className=" hover:text-gray-500">
+              </Link>
+              <Link
+                href="https://x.com/HR_Evolve_?t=immO9EgOzVBfrDZmz1t4Uw&s=08"
+                className=" hover:text-gray-500"
+              >
                 <span className="sr-only">Twitter</span>
                 <BsTwitterX className="h-6 w-6" />
-              </a>
-              <a href="#" className=" hover:text-gray-500">
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/hr-evolve-india/"
+                className=" hover:text-gray-500"
+              >
                 <span className="sr-only">LinkedIn</span>
                 <FaLinkedin className="h-6 w-6" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -42,12 +55,12 @@ export default function Footer() {
             <ul className="space-y-4">
               {["About", "Team", "Blog", "Careers"].map((item) => (
                 <li key={item}>
-                  <a
+                  <Link
                     href="#"
                     className="text-base text-gray-500 hover:text-gray-900"
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -59,12 +72,12 @@ export default function Footer() {
             <ul className="space-y-4">
               {["Help", "Sales", "Advertise", "Privacy"].map((item) => (
                 <li key={item}>
-                  <a
+                  <Link
                     href="#"
                     className="text-base text-gray-500 hover:text-gray-900"
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -75,12 +88,18 @@ export default function Footer() {
             &copy; 2024 Shadcnblocks. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-gray-500 hover:text-gray-900">
+            <Link
+              href="#"
+              className="text-sm text-gray-500 hover:text-gray-900"
+            >
               Terms and Conditions
-            </a>
-            <a href="#" className="text-sm text-gray-500 hover:text-gray-900">
+            </Link>
+            <Link
+              href="#"
+              className="text-sm text-gray-500 hover:text-gray-900"
+            >
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

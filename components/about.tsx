@@ -1,6 +1,7 @@
 import { ChevronRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -28,10 +29,17 @@ const About = () => {
 
             <div className="flex mt-6 gap-5">
               <Button className="w-full sm:w-auto text-lg px-8 py-6">
-                Register
+                <Link href={"https://makemypass.com/elevate-2024"}>
+                  Register Now
+                </Link>
               </Button>
               <Button variant={"outline"} className="text-lg px-8 py-6">
-                Learn more <ChevronRight className="ml-2 size-4" />
+                <Link
+                  className="flex justify-center items-center"
+                  href={"https://makemypass.com/elevate-2024"}
+                >
+                  Learn more <ChevronRight className="ml-2 size-4" />
+                </Link>
               </Button>
             </div>
           </div>

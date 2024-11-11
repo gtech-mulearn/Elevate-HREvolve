@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const Landing = () => {
   const container = useRef(null!);
@@ -248,7 +249,7 @@ const Landing = () => {
           </span>
         </h1>
         <Button className={cn("text-xl p-8 mt-12 bg-[#333333]")}>
-          Register Now
+          <Link href={"https://makemypass.com/elevate-2024"}>Register Now</Link>
         </Button>
       </div>
     </section>
