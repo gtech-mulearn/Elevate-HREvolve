@@ -10,6 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navItems = [
   { title: "Home", href: "#" },
@@ -25,7 +26,13 @@ const Navbar = () => {
         <nav className="hidden justify-between lg:flex">
           <div className="flex items-center w-full justify-between gap-6">
             <div className="flex items-center gap-2">
-              <img src="/logo.png" className="max-w-64" alt="logo" />
+              <Image
+                height={150}
+                width={150}
+                src="/logo.png"
+                className="max-w-64"
+                alt="logo"
+              />
             </div>
             <div className="flex items-center">
               {navItems.map((item) => (
@@ -49,8 +56,10 @@ const Navbar = () => {
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <img
-                src="https://www.indiahrsummit.com/wp-content/uploads/2024/09/HR-Logo-01.png"
+              <Image
+                height={100}
+                width={100}
+                src="/logo.png"
                 className="max-w-64"
                 alt="logo"
               />
@@ -65,8 +74,10 @@ const Navbar = () => {
                 <SheetHeader>
                   <SheetTitle>
                     <div className="flex items-center gap-2">
-                      <img
-                        src="https://www.indiahrsummit.com/wp-content/uploads/2024/09/HR-Logo-01.png"
+                      <Image
+                        height={100}
+                        width={100}
+                        src="/logo.png"
                         className="max-w-64"
                         alt="logo"
                       />

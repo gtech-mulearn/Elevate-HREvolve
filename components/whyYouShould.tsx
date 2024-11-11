@@ -95,14 +95,14 @@ const WhyYouShould = () => {
   );
 
   return (
-    <section ref={container} className="px-16 pt-16 w-full relative">
+    <section ref={container} className="md:px-16 px-8 pt-16 w-full relative">
       <svg
         width="218"
         height="449"
         viewBox="0 0 218 449"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute right-0 top-0 z-0"
+        className="absolute right-0 top-0 z-0 max-sm:hidden"
       >
         <path
           d="M446.2 258.203C464.648 135.928 380.478 21.8494 258.203 3.40196C135.928 -15.0455 21.8495 69.1236 3.40209 191.399C-15.0454 313.674 69.1237 427.752 191.399 446.2C313.674 464.647 427.753 380.478 446.2 258.203ZM72.2727 201.789C84.9817 117.55 163.574 59.5635 247.813 72.2725C332.052 84.9815 390.038 163.574 377.329 247.813C364.62 332.052 286.028 390.038 201.789 377.329C117.55 364.62 59.5636 286.028 72.2727 201.789Z"
@@ -128,7 +128,7 @@ const WhyYouShould = () => {
         viewBox="0 0 156 421"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute left-0 bottom-1/2 -z-[1]"
+        className="absolute left-0 bottom-1/2 -z-[1] max-sm:hidden"
       >
         <path
           d="M152.854 179.29C170.126 293.773 91.3203 400.582 -23.1629 417.854C-137.646 435.126 -244.455 356.32 -261.726 241.837C-278.998 127.354 -200.193 20.5452 -85.7099 3.27337C28.7733 -13.9985 135.582 64.8068 152.854 179.29ZM-197.245 232.109C-185.346 310.98 -111.762 365.271 -32.8911 353.372C45.9798 341.473 100.271 267.889 88.3721 189.018C76.4729 110.147 2.88928 55.856 -75.9816 67.7551C-154.853 79.6542 -209.144 153.238 -197.245 232.109Z"
@@ -159,27 +159,27 @@ const WhyYouShould = () => {
           <div
             key={i}
             className={cn(
-              "flex justify-between gap-5 items-end elem-container container",
+              "flex justify-between gap-5 items-end elem-container container max-sm:flex-col-reverse",
               {
                 "flex-row-reverse": i % 2 === 0,
               }
             )}
           >
-            <div className="w-1/2 _text-content">
-              <h1 className="font-american_Purpose xl:text-7xl lg:text-5xl text-3xl mb-8">
+            <div className="w-1/2 _text-content max-sm:w-full">
+              <h1 className="font-american_Purpose xl:text-7xl lg:text-5xl text-3xl md:mb-8 mb-5">
                 {item.title}
               </h1>
-              <div className=" lg:text-3xl text-2xl tracking-tight">
+              <div className=" lg:text-3xl text-2xl max-sm:text-lg tracking-tight">
                 {item.description}
               </div>
             </div>
-            <div className="overflow-y-clip">
+            <div className="overflow-y-clip max-sm:w-full">
               <Image
                 src={`/why/img${i + 1}.webp`}
                 alt="why attend"
                 width={500}
                 height={500}
-                className="rounded-lg _images max-lg:w-[40vw]"
+                className="rounded-lg _images max-lg:w-[40vw] max-sm:w-full"
                 draggable={false}
               ></Image>
             </div>

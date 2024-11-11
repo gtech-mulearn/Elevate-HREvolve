@@ -34,25 +34,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div>
-            <h3 className="text-sm font-semibold  tracking-wider uppercase mb-4">
-              Product
-            </h3>
-            <ul className="space-y-4">
-              {["Overview", "Pricing", "Marketplace", "Features"].map(
-                (item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-base text-gray-500 hover:text-gray-900"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
+
           <div>
             <h3 className="text-sm font-semibold  tracking-wider uppercase mb-4">
               Company
