@@ -28,12 +28,12 @@ const About = () => {
             </p>
 
             <div className="flex mt-6 gap-5">
-              <Button className="w-full sm:w-auto text-lg px-8 py-6">
+              <Button className="w-full sm:w-auto text-lg p-6 md:p-8 py-6">
                 <Link href={"https://makemypass.com/elevate-2024"}>
                   Register Now
                 </Link>
               </Button>
-              <Button variant={"outline"} className="text-lg px-8 py-6">
+              <Button variant={"outline"} className="text-lg p-6 md:p-8 py-6">
                 <Link
                   className="flex justify-center items-center"
                   href={"https://makemypass.com/elevate-2024"}

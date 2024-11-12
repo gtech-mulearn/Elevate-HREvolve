@@ -60,7 +60,7 @@ const Speakers = () => {
         </defs>
       </svg>
 
-      <div className=" mt-32 flex gap-8 flex-wrap justify-center items-center">
+      <div className="mt-12 md:mt-32 flex gap-8 flex-wrap justify-center items-center max-sm:gap-20">
         {people.map((person, i) => (
           <div key={i} className="relative group ">
             <Image
