@@ -11,12 +11,13 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 const navItems = [
-  { title: "Home", href: "#" },
+  { title: "Home", href: "#home" },
   { title: "Agenda", href: "#" },
-  { title: "Speakers", href: "#" },
-  { title: "Contact us", href: "#" },
+  { title: "Speakers", href: "#speakers" },
+  { title: "Contact us", href: "#location" },
 ];
 
 const Navbar = () => {
@@ -36,7 +37,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.title}
                   className={cn(
                     "text-muted-foreground",
@@ -48,7 +49,7 @@ const Navbar = () => {
                   href={item.href}
                 >
                   {item.title}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -86,13 +87,13 @@ const Navbar = () => {
                 </SheetHeader>
                 <div className="my-8 flex flex-col gap-4">
                   {navItems.map((item) => (
-                    <a
+                    <Link
                       key={item.title}
                       href={item.href}
                       className="font-semibold"
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </SheetContent>

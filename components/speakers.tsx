@@ -27,7 +27,7 @@ const Speakers = () => {
   ];
 
   return (
-    <section className="py-32 px-8 relative">
+    <section id="speakers" className="py-32 px-8 relative">
       <div className="flex flex-col items-center text-center">
         <h2 className="my-6  font-american_Purpose text-5xl md:text-7xl max-sm:text-4xl">
           Our Expert Speakers

@@ -98,7 +98,7 @@ const WhyYouShould = () => {
   );
 
   return (
-    <section ref={container} className="md:px-16 px-8 pt-16 w-full relative">
+    <section ref={container} className="md:px-16 px-8 md:pt-16 w-full relative">
       <svg
         width="218"
         height="449"

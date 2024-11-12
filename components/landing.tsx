@@ -159,7 +159,7 @@ const Landing = () => {
       );
   });
   return (
-    <section ref={container} className="p-8 px-0">
+    <section id="home" ref={container} className="p-8 px-0">
       <div
         style={{
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",

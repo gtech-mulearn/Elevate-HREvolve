@@ -36,7 +36,7 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
           {Object.entries(timeLeft).map(([unit, value]) => (
             <div
               key={unit}
-              className="flex flex-col items-center justify-center bg-[rgba(60,60,60,1)] text-white rounded-lg md:p-4 p-2 shadow-2xl w-24 md:w-36 shadow-[#242323]"
+              className="flex flex-col items-center justify-center bg-[rgba(60,60,60,1)] text-white rounded-lg md:p-4 p-2 shadow-2xl w-[5.4rem] md:w-36 shadow-[#242323]"
             >
               <NumberFlow
                 value={value}

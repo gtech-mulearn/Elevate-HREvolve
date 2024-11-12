@@ -12,9 +12,8 @@ export default function Footer() {
           <div className="md:col-span-2 md:w-1/3">
             <img src={"/logo.png"} className="max-w-64" alt="logo" />
             <p className=" my-4">
-              The HR Leadership Summit 2024 will explore how new work models,
-              organization structures, hybrid workplaces and emerging HR
-              technologies. Organized By Synnex Group.
+              Elevate 2024 is a platform for everyone to learn, grow, and
+              connect with the best minds in the industry.
             </p>
             <div className="flex space-x-4">
               <Link
