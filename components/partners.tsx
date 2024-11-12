@@ -7,7 +7,7 @@ const Partners = () => {
   return (
     <div className="md:py-32 py-8 flex gap-5">
       <Marquee gradient={true} gradientColor="white" className="w-full">
-        {[...Array(6)].map((_, i) => (
+        {[...Array(10)].map((_, i) => (
           <Image
             key={i}
             src={`/partners/partner${i + 1}.webp`}
@@ -18,7 +18,7 @@ const Partners = () => {
             className="mr-4 object-cover"
           ></Image>
         ))}
-        {[...Array(6)].map((_, i) => (
+        {[...Array(10)].map((_, i) => (
           <Image
             key={i}
             src={`/partners/partner${i + 1}.webp`}
@@ -29,7 +29,7 @@ const Partners = () => {
             className="mr-4 object-cover"
           ></Image>
         ))}
-        {[...Array(6)].map((_, i) => (
+        {[...Array(10)].map((_, i) => (
           <Image
             key={i}
             src={`/partners/partner${i + 1}.webp`}

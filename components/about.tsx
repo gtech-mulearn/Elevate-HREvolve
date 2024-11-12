@@ -14,6 +14,7 @@ const About = () => {
             width={500}
             src="/landing.jpg"
             alt="placeholder"
+            draggable={false}
             className="max-h-96 w-full rounded-lg object-cover md:max-h-[500px] md:w-1/2"
           />
           <div className="lg:p-10">
