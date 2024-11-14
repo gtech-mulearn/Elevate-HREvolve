@@ -1,169 +1,49 @@
 import React from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const Timeline = () => {
-  const schedules = [
-    {
-      time: "9:00 AM",
-      activity: "Registration and Networking",
-      speaker: null,
-      topic: null,
-    },
-    {
-      time: "10:00 AM",
-      activity: "Welcome address",
-      speaker: null,
-      topic: null,
-    },
-    {
-      time: "10:15 AM",
-      activity: "Inaugural function",
-      speaker: null,
-      topic: null,
-    },
-    {
-      time: "11:00 AM",
-      activity: "Keynote Address",
-      speaker: "Raj Raghavan",
-      speakerTitle: "Chief People & Business Officer at CogniZant Inc",
-      topic: "Shaping the Future: Leading with Agility, Innovation and Purpose",
-    },
-    {
-      time: "11:45 AM",
-      activity: "Power Talk",
-      speaker: "Debashis Das",
-      speakerTitle: "Senior Director - South & Advisory Services, APAC, SHRM",
-      topic: "Leadership by SHRM",
-    },
-    {
-      time: "12:15 PM",
-      activity: "Special Address",
-      speaker: "Pratap G.",
-      speakerTitle: "CEO, GreyHound Experience",
-      topic:
-        "People Function as an Innovation Hub: Driving Culture of creativity and Experimentation",
-    },
-    {
-      time: "2:00 PM",
-      activity: "Special Address",
-      speaker: "Rip Dominic",
-      speakerTitle:
-        "Chief Evangelist, Fractal Analytics & Chairman, FiresNite Consulting",
-      topic:
-        "Shaping the Future of Human Behaviour with Insights from Neuroscience",
-    },
-    {
-      time: "2:45 PM",
-      activity: "Special Address",
-      speaker: "Muhammad Rafi",
-      speakerTitle: "Founder & Chief Mentor, Nucleus of Change",
-      topic: "Rewire to Reshape: Preparing Our Minds for the Future",
-    },
-    {
-      time: "3:30 PM",
-      activity: "Special Address",
-      speaker: "Sujjesh Weerio",
-      speakerTitle: "HR Leader at Nielsen India",
-      topic: "Experience Value Proposition as a Strategic Advantage",
-    },
-    {
-      time: "4:00 PM",
-      activity: "Panel Discussion",
-      speakers: [
-        {
-          name: "Soja Cherian",
-          title: "CSO, Zaffin",
-        },
-        {
-          name: "Leeyonce Maria",
-          title: "Senior Manager HR, Infosys",
-        },
-        {
-          name: "Varghese Charles",
-          title: "Head - HR, Strategy & Consulting, UST - (TBC)",
-        },
-        {
-          name: "HR Leader",
-          title: "awaiting confirmation",
-        },
-        {
-          name: "Diyabashkar Prasad",
-          title: "Director, ICDMAT",
-        },
-      ],
-      topic: "Merging Technology with Human Ingenuity",
-    },
-    {
-      time: "5:00 PM",
-      activity: "Closing ceremony",
-      speaker: null,
-      topic: null,
-    },
-  ];
-
   return (
     <div className="p-6 sm:p-10">
-      <h2 className="font-american_Purpose text-5xl md:text-7xl max-sm:text-4xl text-center">
-        Event Schedule
-      </h2>
-      <div className="after:absolute after:inset-y-0 after:w-px after:bg-gray-500/20 relative pl-6 after:left-0 grid gap-8 dark:after:bg-gray-400/20">
-        {schedules.map((schedule, index) => (
-          <Accordion key={index} type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>
-                <div>
-                  {schedule.time}
-                  <span className="text-gray-500 ml-20">
-                    {schedule.activity}
-                  </span>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="flex gap-4">
-                  <div className="w-1/4">
-                    <p className="text-gray-500">Activity</p>
-                    <p className="font-bold">{schedule.activity}</p>
-                  </div>
-                  <div className="w-3/4">
-                    <p className="text-gray-500">Speaker</p>
-                    {schedule.speaker ? (
-                      <p className="font-bold">{schedule.speaker}</p>
-                    ) : (
-                      <p className="font-bold">TBA</p>
-                    )}
-                    {schedule.speakerTitle && (
-                      <p className="text-gray-500">{schedule.speakerTitle}</p>
-                    )}
-                  </div>
-                </div>
-                {schedule.topic && (
-                  <div className="mt-4">
-                    <p className="text-gray-500">Topic</p>
-                    <p className="font-bold">{schedule.topic}</p>
-                  </div>
-                )}
-                {schedule.speakers && (
-                  <div className="mt-4">
-                    <p className="text-gray-500">Speakers</p>
-                    <ul>
-                      {schedule.speakers.map((speaker) => (
-                        <li key={speaker.name}>
-                          <p className="font-bold">{speaker.name}</p>
-                          <p className="text-gray-500">{speaker.title}</p>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        ))}
+      <div className="after:absolute after:inset-y-0 after:w-px after:bg-gray-500/20 relative pl-6 after:left-0 grid gap-10 dark:after:bg-gray-400/20">
+        <div className="grid gap-1 text-sm relative">
+          <div className="aspect-square w-3 bg-gray-900 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-1 dark:bg-gray-50" />
+          <div className="text-lg font-bold">
+            March 14, 1879 - Invention of Quantum Computing
+          </div>
+          <div className="text-gray-500 dark:text-gray-400">
+            Scientists at a leading research institution unveil a groundbreaking
+            breakthrough in quantum computing
+          </div>
+        </div>
+        <div className="grid gap-1 text-sm relative">
+          <div className="aspect-square w-3 bg-gray-900 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-1 dark:bg-gray-50" />
+          <div className="text-lg font-bold">
+            April 1, 1939 - First Quantum Computer
+          </div>
+          <div className="text-gray-500 dark:text-gray-400">
+            The first quantum computer is built by a team of researchers in a
+            laboratory in the United States.
+          </div>
+        </div>
+        <div className="grid gap-1 text-sm relative">
+          <div className="aspect-square w-3 bg-gray-900 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-1 dark:bg-gray-50" />
+          <div className="text-lg font-bold">
+            June 12, 1954 - Quantum Computing Research
+          </div>
+          <div className="text-gray-500 dark:text-gray-400">
+            A group of scientists in Europe publish a paper on quantum computing
+            research.
+          </div>
+        </div>
+        <div className="grid gap-1 text-sm relative">
+          <div className="aspect-square w-3 bg-gray-900 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-1 dark:bg-gray-50" />
+          <div className="text-lg font-bold">
+            December 31, 1979 - Quantum Computing Breakthrough
+          </div>
+          <div className="text-gray-500 dark:text-gray-400">
+            A team of researchers in Asia makes a significant breakthrough in
+            quantum computing.
+          </div>
+        </div>
       </div>
     </div>
   );

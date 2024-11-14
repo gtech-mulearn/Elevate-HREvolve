@@ -18,7 +18,7 @@ export default function Home() {
       <div className="flex flex-col relative">
         <Navbar />
         <Landing />
-        <Countdown targetDate="2024-11-21T09:00:00+05:30" />
+        <Countdown targetDate="2024-11-21T09:00:00" />
         <About />
         <WhyYouShould />
         <Speakers />
