@@ -94,7 +94,7 @@ const Timeline = () => {
     },
   ];
   return (
-    <div className="flex justify-center items-center flex-col">
+    <div id="agenda" className="flex justify-center items-center flex-col">
       <h2 className="my-6  font-american_Purpose text-5xl md:text-7xl max-sm:text-4xl">
         Shedule
       </h2>

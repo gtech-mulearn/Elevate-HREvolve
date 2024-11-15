@@ -24,6 +24,11 @@ const Speakers = () => {
       position:
         "Chief Evangelist, Fractal Analytics & Chairman, FinalMile Consulting",
     },
+    {
+      name: "Dedeepya Ajith John",
+      position:
+        "(Senior Director - South & Advisory Services, SHRM APAC & India)",
+    },
   ];
 
   return (
@@ -68,13 +73,13 @@ const Speakers = () => {
               width={250}
               height={250}
               src={`/speakers/frame.webp`}
-              className="w-full xl:w-[16vw]"
+              className="w-full xl:w-[14vw]"
               draggable={false}
             ></Image>
             <Image
               alt="frame"
-              width={500}
-              height={500}
+              width={450}
+              height={450}
               src={`/speakers/speaker${i + 1}.webp`}
               className={cn(
                 " w-[90%] absolute bottom-0 object-contain left-1/2 -translate-x-1/2 transform",
@@ -85,7 +90,7 @@ const Speakers = () => {
               draggable={false}
             ></Image>
             <div className="absolute left-2 bottom-2 h-[5rem] p-1 gap-1 flex flex-col text-center font-thin justify-center items-center bg-gradient-to-b from-[#333333] to-black w-[95%] rounded-sm text-white">
-              <h2 className="text-2xl font-bold">{person.name}</h2>
+              <h2 className="text-xl font-bold">{person.name}</h2>
               <p className="text-[0.7rem]">{person.position}</p>
             </div>
           </div>

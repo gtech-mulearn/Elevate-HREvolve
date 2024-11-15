@@ -15,7 +15,7 @@ import Link from "next/link";
 
 const navItems = [
   { title: "Home", href: "#home" },
-  { title: "Agenda", href: "#" },
+  { title: "Agenda", href: "#agenda" },
   { title: "Speakers", href: "#speakers" },
   { title: "Contact us", href: "#location" },
 ];
