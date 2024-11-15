@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -14,11 +14,23 @@ const Landing = () => {
   const topSvgRef = useRef(null);
   const bottomSvgRef = useRef(null);
 
+  const [isScrollable, setisScrollable] = useState(false);
+
   const toggleScroll = (enable: boolean) => {
     document.body.style.overflow = enable ? "auto" : "hidden";
   };
 
   const len = useLenis();
+
+  useEffect(() => {
+    if (len) {
+      if (isScrollable) {
+        len.start();
+      } else {
+        len.stop();
+      }
+    }
+  }, [len, isScrollable]);
 
   useGSAP(
     () => {
@@ -54,7 +66,6 @@ const Landing = () => {
 
   useGSAP(
     () => {
-      len?.stop();
       toggleScroll(false);
       const tl = gsap.timeline({
         defaults: {
@@ -106,7 +117,7 @@ const Landing = () => {
           ease: "power4.out",
           duration: 1.5,
           onComplete: () => {
-            len?.start();
+            setisScrollable(true);
             toggleScroll(true);
             landing_animation();
           },
@@ -114,11 +125,6 @@ const Landing = () => {
     },
     { scope: container }
   );
-  useEffect(() => {
-    return () => {
-      len?.start();
-    };
-  }, [len]);
 
   const { contextSafe } = useGSAP({ scope: container });
 

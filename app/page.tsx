@@ -7,7 +7,7 @@ import Landing from "@/components/landing";
 import Location from "@/components/location";
 import Partners from "@/components/partners";
 import Speakers from "@/components/speakers";
-// import Timeline from "@/components/timeline";
+import Timeline from "@/components/timeline";
 import Countdown from "@/components/ui/countdown";
 import Navbar from "@/components/ui/nav";
 import WhyYouShould from "@/components/whyYouShould";
@@ -22,7 +22,7 @@ export default function Home() {
         <About />
         <WhyYouShould />
         <Speakers />
-        {/* <Timeline /> */}
+        <Timeline />
         <Partners />
         <Location />
         <Footer />

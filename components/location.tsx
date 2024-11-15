@@ -37,7 +37,7 @@ const Location = () => {
               <Clock className="w-5 h-5 mt-1 text-gray-600" />
               <div>
                 <h3 className="font-semibold text-lg">Time</h3>
-                <p className="text-gray-600">09:00 AM - 21st Monday 06:30 PM</p>
+                <p className="text-gray-600">09:00 AM - 06:00 PM</p>
               </div>
             </div>
           </div>
