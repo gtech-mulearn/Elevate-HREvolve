@@ -4,7 +4,9 @@ import NumberFlow from "@number-flow/react";
 
 const Countdown = ({ targetDate }: { targetDate: string }) => {
   const calculateTimeLeft = () => {
-    const difference = +new Date(targetDate) - +new Date();
+    const target = new Date(targetDate).getTime();
+    const now = new Date().getTime();
+    const difference = target - now;
     let timeLeft: { [key: string]: number } = {};
 
     if (difference > 0) {
