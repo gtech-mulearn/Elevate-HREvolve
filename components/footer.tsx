@@ -51,20 +51,6 @@ export default function Footer() {
           <p className="text-base text-gray-400">
             &copy; Elevate 2024. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link
-              href="#"
-              className="text-sm text-gray-500 hover:text-gray-900"
-            >
-              Terms and Conditions
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-gray-500 hover:text-gray-900"
-            >
-              Privacy Policy
-            </Link>
-          </div>
         </div>
       </div>
       <svg
