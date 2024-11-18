@@ -105,11 +105,11 @@ const Timeline = () => {
           </TableCaption>
           <TableHeader className="md:text-3xl text-xl font-american_Purpose">
             <TableRow>
-              <TableHead className="text-[rgba(60,60,60,1)] w-[150px]">
+              {/* <TableHead className="text-[rgba(60,60,60,1)] w-[150px]">
                 Time
-              </TableHead>
+              </TableHead> */}
 
-              <TableHead className="text-[rgba(60,60,60,1)] w-[150px]">
+              <TableHead className="text-[rgba(60,60,60,1)] w-[160px]">
                 Name
               </TableHead>
               <TableHead className="text-[rgba(60,60,60,1)]">
@@ -123,7 +123,7 @@ const Timeline = () => {
           <TableBody>
             {schedules.map((shedule, index) => (
               <TableRow key={index}>
-                <TableCell className="font-medium">{shedule.time}</TableCell>
+                {/* <TableCell className="font-medium">{shedule.time}</TableCell> */}
                 <TableCell>{shedule.activity}</TableCell>
 
                 <TableCell className="text-right flex flex-wrap max-sm:w-[60vw]">

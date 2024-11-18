@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+// import Link from "next/link";
 import { useLenis } from "lenis/react";
 
 const Landing = () => {
@@ -263,8 +263,13 @@ const Landing = () => {
             shaping the future
           </span>
         </h1>
-        <Button className={cn("text-xl p-6 md:p-8 mt-12 bg-[#333333]")}>
-          <Link href={"https://makemypass.com/elevate-2024"}>Register Now</Link>
+        <Button
+          className={cn("text-xl p-6 md:p-8 mt-12 bg-[#333333] capitalize")}
+        >
+          {/* <Link href={"https://makemypass.com/elevate-2024"}>
+            registraion closed
+          </Link> */}
+          registraion closed
         </Button>
       </div>
     </section>
