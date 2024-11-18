@@ -29,6 +29,26 @@ const Speakers = () => {
       position:
         "(Senior Director - South & Advisory Services, SHRM APAC & India)",
     },
+    {
+      name: "Suja Chandy",
+      position: "Chief Security Officer (Global) & Managing Director, India",
+    },
+    {
+      name: "Manju",
+      position: "Regional HR Head at TCS Trivandrum",
+    },
+    {
+      name: "Leyones Abhraham",
+      position: "Senior Manager HR at Infosys",
+    },
+    {
+      name: "Dr. Jayasankar",
+      position: "Director DCSMAT",
+    },
+    {
+      name: "Anoop Ambika",
+      position: "Chief Executive Officer, Kerala Startup Mission",
+    },
   ];
 
   return (
@@ -65,9 +85,9 @@ const Speakers = () => {
         </defs>
       </svg>
 
-      <div className="mt-12 md:mt-32 flex gap-8 flex-wrap justify-center items-center max-sm:gap-20">
+      <div className="mt-12 md:mt-32 flex gap-12 flex-wrap justify-center items-center max-sm:gap-20">
         {people.map((person, i) => (
-          <div key={i} className="relative group ">
+          <div key={i} className="relative group mb-4">
             <Image
               alt="frame"
               width={250}
@@ -78,11 +98,11 @@ const Speakers = () => {
             ></Image>
             <Image
               alt="frame"
-              width={450}
-              height={450}
+              width={500}
+              height={500}
               src={`/speakers/speaker${i + 1}.webp`}
               className={cn(
-                " w-[90%] absolute bottom-0 object-contain left-1/2 -translate-x-1/2 transform",
+                " w-[92%] absolute bottom-0 object-contain left-1/2 -translate-x-1/2 transform",
                 {
                   "bottom-12": i === 0 || i === 2,
                 }
@@ -90,8 +110,12 @@ const Speakers = () => {
               draggable={false}
             ></Image>
             <div className="absolute left-2 bottom-2 h-[5rem] p-1 gap-1 flex flex-col text-center font-thin justify-center items-center bg-gradient-to-b from-[#333333] to-black w-[95%] rounded-sm text-white">
-              <h2 className="text-xl font-bold">{person.name}</h2>
-              <p className="text-[0.7rem]">{person.position}</p>
+              <h2 className="text-xl font-bold plus-jakarta-sans">
+                {person.name}
+              </h2>
+              <p className="text-[0.7rem] plus-jakarta-sans">
+                {person.position}
+              </p>
             </div>
           </div>
         ))}
