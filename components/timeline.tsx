@@ -11,17 +11,20 @@ import {
 const Timeline = () => {
   const schedules = [
     {
-      time: "09:00 AM",
-      activity: "Inaugural Function",
+      time: "10:00 AM",
+      activity: "Welcome Address",
+      speakers: ["Deepa Nair, 6D Technologies HREvolve Member"],
+      topic: null,
+    },
+    {
+      time: "10:05 AM",
+      activity: "Opening Ceremony",
       speakers: [
-        "Dr. Rathan Kelkar, IAS (IT Secretary, Kerala Govt)",
-        "Dinesh Thampi (VP & Delivery Centre Head – Kerala, TCS)",
         "Sreekumar V (Centre Head, Tata Elxsi | Secretary, GTech)",
         "Col. Sanjeev Nair (CEO, Technopark)",
-        "Tina James (CEO, Revyrie)",
-        "Dr. Jayasankar Prasad (Director, DCSMAT)",
-        "Raj Raghavan (CPO at CoreStack Inc, Former HR Leader at Indigo, Amazon APAC & ME, GE India)",
-        "Suja Chandy (Chief Sustainability Officer & MD India, Zafin)",
+        "Anoop Ambika, CEO, Kerala Start-up Mission",
+        "Deepu S Nath, MD, Faya",
+        "Dinesh Thampi (VP & Delivery Centre Head – Kerala, TCS)",
       ],
       topic: null,
     },
@@ -35,16 +38,22 @@ const Timeline = () => {
     },
     {
       time: "11:00 AM",
-      activity: "Session 1",
+      activity: "Power Talk-1",
       speakers: [
-        "Biju Dominic (Chief Evangelist, Fractal Analytics & Chairman, FinalMile Consulting)",
+        "Dedeepya Ajith John, Senior Director - South & Advisory Services, APAC, SHRM",
       ],
+      topic: "YOU AS THE CONSULTATIVE ADVISOR MOVING FROM INFLENCE TO INSIGHT",
+    },
+    {
+      time: "11:00 AM",
+      activity: "Master Talk-1",
+      speakers: ["Biju Dominic"],
       topic:
         "Shaping the Future of Human Behaviour with Insights from Neuroscience",
     },
     {
       time: "12:00 PM",
-      activity: "Session 2",
+      activity: "Power Talk-2",
       speakers: ["Muhammed Rafi (Founder & Chief Mentor, Magic of Change)"],
       topic: "Rewire to Reshape: Preparing Our Minds for the Future",
     },
@@ -56,16 +65,8 @@ const Timeline = () => {
     },
     {
       time: "02:00 PM",
-      activity: "Power Talk 1",
-      speakers: [
-        "Dedeepya Ajith John (Senior Director - South & Advisory Services, SHRM APAC & India)",
-      ],
-      topic: "Research insights on People Leadership by SHRM",
-    },
-    {
-      time: "03:00 PM",
-      activity: "Session 3",
-      speakers: ["Aravind Warrier (HR Leader at Volvo India)"],
+      activity: "Master Talk-2",
+      speakers: ["Aravind Warrier, HR Leader at Volvo India"],
       topic: "Experience Value Proposition as a Strategic Advantage",
     },
     {
@@ -100,9 +101,6 @@ const Timeline = () => {
       </h2>
       <div className="container border-2 rounded-lg p-8">
         <Table className="">
-          <TableCaption>
-            *as of 13th November 2024, and subject to refinement
-          </TableCaption>
           <TableHeader className="md:text-3xl text-xl font-american_Purpose">
             <TableRow>
               {/* <TableHead className="text-[rgba(60,60,60,1)] w-[150px]">

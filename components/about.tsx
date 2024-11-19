@@ -36,7 +36,7 @@ const About = () => {
                 {/* <Link href={"https://makemypass.com/elevate-2024"}>
                   Register Now
                 </Link> */}
-                registraion closed
+                registration closed
               </Button>
               <Button variant={"outline"} className="text-lg p-6">
                 <Link

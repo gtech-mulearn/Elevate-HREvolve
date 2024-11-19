@@ -267,9 +267,9 @@ const Landing = () => {
           className={cn("text-xl p-6 md:p-8 mt-12 bg-[#333333] capitalize")}
         >
           {/* <Link href={"https://makemypass.com/elevate-2024"}>
-            registraion closed
+            registration closed
           </Link> */}
-          registraion closed
+          registration closed
         </Button>
       </div>
     </section>
