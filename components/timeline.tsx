@@ -23,7 +23,6 @@ const Timeline = () => {
         "Col. Sanjeev Nair (CEO, Technopark)",
         "Anoop Ambika, CEO, Kerala Start-up Mission",
         "Deepu S Nath, MD, Faya",
-        "Dinesh Thampi (VP & Delivery Centre Head – Kerala, TCS)",
       ],
       topic: null,
     },
