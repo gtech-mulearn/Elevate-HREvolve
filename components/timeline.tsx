@@ -12,17 +12,17 @@ const Timeline = () => {
     {
       time: "10:00 AM",
       activity: "Welcome Address",
-      speakers: ["Deepa Nair, 6D Technologies HREvolve Member"],
+      speakers: ["Deepa Nair (6D Technologies HR Evolve Member)"],
       topic: null,
     },
     {
       time: "10:05 AM",
       activity: "Opening Ceremony",
       speakers: [
-        "Sreekumar V (Centre Head, Tata Elxsi | Secretary, GTech)",
-        "Col. Sanjeev Nair (CEO, Technopark)",
-        "Anoop Ambika, CEO, Kerala Start-up Mission",
-        "Deepu S Nath, MD, Faya",
+        "Sreekumar V (Centre Head, Tata Elxsi | Secretary, GTech), ",
+        "Col. Sanjeev Nair (CEO, Technopark), ",
+        "Anoop Ambika (CEO, Kerala Start-up Mission), ",
+        "Deepu S Nath (MD, Faya)",
       ],
       topic: null,
     },
@@ -34,13 +34,14 @@ const Timeline = () => {
       ],
       topic: "Shaping the Future: Leading with Agility, Innovation and Purpose",
     },
+
     {
       time: "11:00 AM",
       activity: "Power Talk-1",
       speakers: [
-        "Dedeepya Ajith John, Senior Director - South & Advisory Services, APAC, SHRM",
+        "Dedeepya Ajith John (Senior Director - South & Advisory Services, APAC, SHRM)",
       ],
-      topic: "YOU AS THE CONSULTATIVE ADVISOR MOVING FROM INFLENCE TO INSIGHT",
+      topic: "YOU as the consultative advisor moving from inflence to insight",
     },
     {
       time: "11:00 AM",
@@ -50,23 +51,25 @@ const Timeline = () => {
         "Shaping the Future of Human Behaviour with Insights from Neuroscience",
     },
     {
+      time: "01:00 PM",
+      activity: "Lunch Break",
+      speakers: [],
+      topic: null,
+    },
+
+    {
       time: "12:00 PM",
       activity: "Power Talk-2",
       speakers: ["Muhammed Rafi (Founder & Chief Mentor, Magic of Change)"],
       topic: "Rewire to Reshape: Preparing Our Minds for the Future",
     },
     {
-      time: "01:00 PM",
-      activity: "Lunch Break",
-      speakers: [],
-      topic: null,
-    },
-    {
       time: "02:00 PM",
       activity: "Master Talk-2",
-      speakers: ["Aravind Warrier, HR Leader at Volvo India"],
+      speakers: ["Aravind Warrier (HR Leader at Volvo India)"],
       topic: "Experience Value Proposition as a Strategic Advantage",
     },
+
     {
       time: "04:00 PM",
       activity: "Power Talk-3",
@@ -77,18 +80,18 @@ const Timeline = () => {
       time: "05:00 PM",
       activity: "Panel Discussion",
       speakers: [
-        "Moderator – Dr. Jayasankar Prasad",
-        "Suja Chandy (Zafin)",
-        "Deepa Sarojammal (Reflections)",
-        "Vagheese Cherian (UST) - to be confirmed",
-        "Leyones Abraham (Infosys)",
+        "Moderator – Dr. Jayasankar Prasad (DCSMAT)",
+        "Suja Chandy (Zafin), ",
+        "Anoop Ambika (KSUM), ",
+        "Leyones Abraham (Infosys), ",
+        "Manju Nair (TCS)",
       ],
       topic: "Navigating Disruptions: Merging Technology with Human Ingenuity",
     },
     {
       time: "06:00 PM",
       activity: "Closing Remarks",
-      speakers: ["HR Evolve Member"],
+      speakers: ["Jithin Chakkalakkal (Reflections Info Systems)"],
       topic: null,
     },
   ];
@@ -127,7 +130,9 @@ const Timeline = () => {
                     <p key={i}>{speaker}</p>
                   ))}
                 </TableCell>
-                <TableCell className="text-">{shedule.topic}</TableCell>
+                <TableCell className="text- capitalize">
+                  {shedule.topic}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

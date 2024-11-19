@@ -109,7 +109,7 @@ const Speakers = () => {
               )}
               draggable={false}
             ></Image>
-            <div className="absolute left-2 bottom-2 h-[5rem] p-1 gap-1 flex flex-col text-center font-thin justify-center items-center bg-gradient-to-b from-[#333333] to-black w-[95%] rounded-sm text-white">
+            <div className="absolute left-0 bottom-0 h-[5rem] p-1 gap-1 flex flex-col text-center font-thin justify-center items-center bg-gradient-to-b from-[#333333] to-black w-full rounded-sm text-white">
               <h2 className="text-xl font-bold plus-jakarta-sans">
                 {person.name}
               </h2>
