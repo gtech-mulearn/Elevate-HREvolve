@@ -111,7 +111,7 @@ const Timeline = () => {
               <TableHead className="text-[rgba(60,60,60,1)]">
                 speakers
               </TableHead>
-              <TableHead className="text-[rgba(60,60,60,1)] text-right">
+              <TableHead className="text-[rgba(60,60,60,1)] text-">
                 activity
               </TableHead>
             </TableRow>
@@ -127,7 +127,7 @@ const Timeline = () => {
                     <p key={i}>{speaker}</p>
                   ))}
                 </TableCell>
-                <TableCell className="text-right">{shedule.topic}</TableCell>
+                <TableCell className="text-">{shedule.topic}</TableCell>
               </TableRow>
             ))}
           </TableBody>
