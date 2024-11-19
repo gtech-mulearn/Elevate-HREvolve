@@ -70,7 +70,7 @@ const Timeline = () => {
     },
     {
       time: "04:00 PM",
-      activity: "Session 4",
+      activity: "Power Talk-3",
       speakers: ["Pratap G (Founder, Leadership Experiences)"],
       topic: "People Function as an Innovation Hub",
     },
