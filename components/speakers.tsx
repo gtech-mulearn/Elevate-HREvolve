@@ -31,7 +31,8 @@ const Speakers = () => {
     },
     {
       name: "Suja Chandy",
-      position: "Chief Security Officer (Global) & Managing Director, India",
+      position:
+        "Chief Sustainability Officer(Global) & Managing Director, India",
     },
     {
       name: "Manju",

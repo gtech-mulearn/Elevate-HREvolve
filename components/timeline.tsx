@@ -46,7 +46,9 @@ const Timeline = () => {
     {
       time: "11:00 AM",
       activity: "Master Talk-1",
-      speakers: ["Biju Dominic"],
+      speakers: [
+        "Biju Dominic (Chief Evangelist, Fractal Analytics & Chairman, FinalMile Consulting)",
+      ],
       topic:
         "Shaping the Future of Human Behaviour with Insights from Neuroscience",
     },
@@ -98,7 +100,7 @@ const Timeline = () => {
   return (
     <div id="agenda" className="flex justify-center items-center flex-col">
       <h2 className="my-6  font-american_Purpose text-5xl md:text-7xl max-sm:text-4xl">
-        Shedule
+        Schedule
       </h2>
       <div className="container border-2 rounded-lg p-8">
         <Table className="">
