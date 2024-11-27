@@ -16,7 +16,7 @@ const Speakers = () => {
       position: "Founder and Chief Mentor, Magic of change",
     },
     {
-      name: "Rajesh Padmanabhan",
+      name: "Raj Raghavan",
       position: "Chief People and Culture Officerat CoreStack",
     },
     {
