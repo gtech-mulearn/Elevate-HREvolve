@@ -1,32 +1,54 @@
-"use client";
-import { ReactLenis } from "lenis/react"; //hade to change everyting to client becaues of lenis🥲🥲
-
-import About from "@/components/about";
-import Footer from "@/components/footer";
-import Landing from "@/components/landing";
-import Location from "@/components/location";
-import Partners from "@/components/partners";
-import Speakers from "@/components/speakers";
-import Timeline from "@/components/timeline";
-import Countdown from "@/components/ui/countdown";
-import Navbar from "@/components/ui/nav";
-import WhyYouShould from "@/components/whyYouShould";
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+// import Speakers from './components/Speakers';
+import WhyAttend from './components/WhyAttend';
+import Agenda from './components/Agenda';
+import Venue from './components/Venue';
+import TicketPrice from './components/TicketPrice';
+// import FAQs from './components/FAQs';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
-      <div className="flex flex-col relative">
+    <div className="min-h-screen bg-gradient-to-tr from-[#000000] via-[#1883ca] to-[#000000] relative z-0">
+      {/* Grid overlay */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-10"
+        style={{
+          backgroundImage: `
+            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(50deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: '25px 25px'
+        }}
+      ></div>
+      
+      <div className="relative z-20">
         <Navbar />
-        <Landing />
-        <Countdown targetDate="2024-11-21T09:00:00+05:30" />
+        
+        <main>
+        <Hero />
+
         <About />
-        <WhyYouShould />
-        <Speakers />
-        <Timeline />
-        <Partners />
-        <Location />
+
+        {/* <Speakers /> */}
+
+        <WhyAttend />
+
+        <Agenda />
+
+        <Venue />
+
+        <TicketPrice />
+
+        {/* <FAQs /> */}
+        </main>
+
         <Footer />
       </div>
-    </ReactLenis>
+    </div>
   );
 }
+
