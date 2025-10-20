@@ -5,23 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const TicketPrice = () => {
-  const checkIcon = (
-    <svg className="w-5 h-5" viewBox="0 0 26 27" fill="none">
-      <path
-        d="M 13 26.5 C 20.18 26.5 26 20.68 26 13.5 C 26 6.32 20.18 0.5 13 0.5 C 5.82 0.5 0 6.32 0 13.5 C 0 20.68 5.82 26.5 13 26.5 Z"
-        fill="rgba(255, 255, 255, 0.02)"
-      />
-      <path
-        d="M 7.117 14.341 L 10.479 17.702 L 18.883 9.298"
-        fill="transparent"
-        strokeWidth="2"
-        stroke="rgb(255,255,255)"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-
   return (
     <section className="py-8 sm:py-16 px-2 sm:px-4 relative overflow-hidden min-h-screen flex items-center justify-center">
       <div className="container mx-auto flex flex-col items-center justify-center">

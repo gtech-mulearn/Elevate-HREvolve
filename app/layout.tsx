@@ -19,6 +19,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://elevate25.vercel.app'),
   title: "ELEVATE25 - Shaping the Future | HR Conclave",
   description: "Join us on 20th November 2025 for ELEVATE25, the ultimate HR Conclave. Shaping the Future: Leading through the Human–AI Nexus. Stay tuned for insights on AI, talent management, and the future of work.",
   icons: {
