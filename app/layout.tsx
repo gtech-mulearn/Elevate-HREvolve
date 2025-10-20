@@ -19,6 +19,9 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NODE_ENV === 'production' 
+    ? (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://elevate25.netlify.app')
+    : 'http://localhost:3000'),
   title: "ELEVATE25 - Shaping the Future | HR Conclave",
   description: "Join us on 20th November 2025 for ELEVATE25, the ultimate HR Conclave. Shaping the Future: Leading through the Human–AI Nexus. Stay tuned for insights on AI, talent management, and the future of work.",
   icons: {
