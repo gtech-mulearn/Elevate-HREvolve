@@ -39,7 +39,7 @@ export default function Navbar() {
       <nav className="w-full max-w-6xl flex items-center justify-between px-4 md:px-8">
         <div>
           <Link href="/" className="text-white text-xl sm:text-2xl font-bold">
-            <Image src="/logo.png" alt="Logo" width={120} height={120} className="sm:w-[150px] sm:h-[30px]" />
+            <Image src="/logo1.png" alt="Logo" width={120} height={120} className="sm:w-[150px] sm:h-[30px]" />
           </Link>
         </div>
 

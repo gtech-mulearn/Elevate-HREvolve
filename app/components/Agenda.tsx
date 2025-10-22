@@ -153,12 +153,10 @@ export default function Agenda() {
                       style={{
                         fontFamily: '"Sora", "Sora Placeholder", sans-serif',
                         fontSize: 'clamp(16px, 4vw, 20px)',
-                        fontWeight: 500,
+                        fontWeight: 700,
                         letterSpacing: '-0.01em',
-                        color: item.type === 'keynote' ? 'rgb(239, 200, 38)' :
-                          item.type === 'panel' ? 'rgb(34, 197, 94)' :
-                            item.type === 'session' ? 'rgb(59, 130, 246)' :
-                              item.type === 'admin' ? 'rgb(168, 85, 247)' : 'white'
+                        color: 'white',
+                        filter: 'brightness(1.1) contrast(1.2)'
                       }}
                     >
                       {item.activity}
