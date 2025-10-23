@@ -136,7 +136,7 @@ export default function WhyAttend() {
                 </div>
 
                 {/* Description */}
-                <div className="mb-4" style={{ minHeight: '120px' }}>
+                <div className="mb-4" style={{ minHeight: '100px' }}>
                   <p 
                     style={{
                       fontFamily: '"Sora", "Sora Placeholder", sans-serif',
