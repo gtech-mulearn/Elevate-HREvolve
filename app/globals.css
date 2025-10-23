@@ -113,3 +113,17 @@ body {
 .text-stroke-white {
   -webkit-text-stroke: 2px white;
 }
+
+/* Partners carousel animation */
+@keyframes marquee-partners {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-partners {
+  animation: marquee-partners 25s linear infinite;
+}

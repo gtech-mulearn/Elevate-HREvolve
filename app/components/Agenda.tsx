@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Agenda() {
   const scheduleItems = [
@@ -11,7 +12,7 @@ export default function Agenda() {
     },
     {
       activity: 'Inaugural Function',
-      speakers: 'Anoop Ambika, (CEO, Kerala Start-Up Mission)\nSreekumar V (Centre Head, Tata Elxsi | Secretary, GTech)\nCol. Sanjeev Nair (Retd.) (CEO, Technopark)\nDeepu S Nath (MD, Faya)',
+      speakers: 'Guest 1 (Yet to be decided)\nGuest 2 (Yet to be decided)\nGuest 3 (Yet to be decided)\nGuest 4 (Yet to be decided)',
       topic: '',
       type: 'admin'
     },
@@ -23,43 +24,43 @@ export default function Agenda() {
     },
     {
       activity: 'Session 1',
+      speakers: '(Yet to be decided)',
+      topic: '(Yet to be decided)',
+      type: 'session'
+    },
+    {
+      activity: 'Power Talk 1',
       speakers: 'Sreejith Krishnan (Yet to Confirm)\nDirector – Learning & Development, Sony India',
       topic: 'Learning Rewired: The Skill-Shelf-Life Crisis Management',
       type: 'session'
     },
     {
-      activity: 'Power Talk 1',
-      speakers: 'SHRM (Yet to Confirm)',
-      topic: '',
+      activity: 'Power Talk 2',
+      speakers: 'SHRM',
+      topic: 'Governance Conundrum: AI, Compliance, and the Ethics of Work',
       type: 'session'
     },
     {
-      activity: 'Session 2',
+      activity: 'Power Talk 3',
+      speakers: 'Great Place to Work® Institute, India',
+      topic: 'The Talent Reset: Repurposing People for the New Work Order',
+      type: 'session'
+    },
+    {
+      activity: 'Power Talk 4',
       speakers: 'Muhammed Rafi\nFounder & Chief Mentor, Magic of Change',
       topic: '',
       type: 'session'
     },
     {
-      activity: 'Session 3/ Power Talk?',
-      speakers: 'Balbir Singh (Yet to Confirm)\nCEO, Great Place to Work® Institute, India',
-      topic: 'The Talent Reset: Repurposing People for the New Work Order',
-      type: 'session'
-    },
-    {
-      activity: 'Session 4',
-      speakers: 'Deepa (Yet to Confirm)',
-      topic: 'Governance Conundrum: AI, Compliance, and the Ethics of Work',
-      type: 'session'
-    },
-    {
-      activity: 'Power Talk 2',
+      activity: 'Power Talk 5',
       speakers: 'LinkedIn (Yet to Confirm)',
       topic: '',
       type: 'session'
     },
     {
       activity: 'Panel Discussion',
-      speakers: 'Moderator – TBD (Yet to Confirm)\nPanel Members:\n1. IBS\n2. Allianz\n3. Infosys\n4. UST',
+      speakers: 'Moderator – TBD (Yet to Confirm)\nPanel Members:\n1. IBS\n2. Guest 1\n3. Guest 2\n4. Guest 3',
       topic: 'The Future of Work: Bridging the Human–AI Continuum',
       type: 'panel'
     },
@@ -122,14 +123,14 @@ export default function Agenda() {
                 className="rounded-lg p-4 sm:p-6"
                 style={{
                   border: `1px solid ${item.type === 'keynote' ? 'rgba(239, 200, 38, 0.3)' :
-                      item.type === 'panel' ? 'rgba(34, 197, 94, 0.3)' :
-                        item.type === 'session' ? 'rgba(59, 130, 246, 0.3)' :
-                          item.type === 'admin' ? 'rgba(168, 85, 247, 0.3)' : 'rgba(255, 255, 255, 0.2)'
+                    item.type === 'panel' ? 'rgba(34, 197, 94, 0.3)' :
+                      item.type === 'session' ? 'rgba(59, 130, 246, 0.3)' :
+                        item.type === 'admin' ? 'rgba(168, 85, 247, 0.3)' : 'rgba(255, 255, 255, 0.2)'
                     }`,
                   backgroundColor: `${item.type === 'keynote' ? 'rgba(239, 200, 38, 0.05)' :
-                      item.type === 'panel' ? 'rgba(34, 197, 94, 0.05)' :
-                        item.type === 'session' ? 'rgba(59, 130, 246, 0.05)' :
-                          item.type === 'admin' ? 'rgba(168, 85, 247, 0.05)' : 'transparent'
+                    item.type === 'panel' ? 'rgba(34, 197, 94, 0.05)' :
+                      item.type === 'session' ? 'rgba(59, 130, 246, 0.05)' :
+                        item.type === 'admin' ? 'rgba(168, 85, 247, 0.05)' : 'transparent'
                     }`
                 }}
                 initial={{ opacity: 0, x: -50 }}
@@ -210,14 +211,14 @@ export default function Agenda() {
           </div>
         </div>
 
-        <motion.div 
+        <motion.div
           className="mt-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
-          <p 
+          <p
             className="text-white/70 italic text-sm"
             style={{
               fontFamily: '"Sora", "Sora Placeholder", sans-serif',
@@ -225,57 +226,203 @@ export default function Agenda() {
               lineHeight: '1.4em'
             }}
           >
-            *as of 15th October 2025, and subject to refinement
+            *as of 23rd October 2025, and subject to refinement
           </p>
         </motion.div>
 
         {/* Ticker Section */}
         <div className="mb-16 mt-12" style={{ opacity: 1, transform: 'perspective(1200px)' }}>
-          <div style={{ display: 'flex', width: '100%', height: '80px', maxWidth: '100%', maxHeight: '100%', placeItems: 'center', margin: '0px', padding: '0px', listStyleType: 'none', opacity: 1, overflow: 'hidden' }}>
-            <ul
-              className="animate-marquee"
+          <Link href="https://makemypass.com/event/elevate25-hr-conclave" target="_blank" rel="noopener noreferrer">
+            <div style={{ display: 'flex', width: '100%', height: '80px', maxWidth: '100%', maxHeight: '100%', placeItems: 'center', margin: '0px', padding: '0px', listStyleType: 'none', opacity: 1, overflow: 'hidden' }}>
+              <ul
+                className="animate-marquee"
+                style={{
+                  display: 'flex',
+                  width: '100%',
+                  height: '100%',
+                  maxWidth: '100%',
+                  maxHeight: '100%',
+                  placeItems: 'center',
+                  margin: '0px',
+                  padding: '0px',
+                  listStyleType: 'none',
+                  gap: '40px',
+                  position: 'relative',
+                  flexDirection: 'row',
+                  willChange: 'transform'
+                }}
+              >
+                {[...Array(10)].map((_, index) => (
+                  <li key={index} style={{ flexShrink: 0 }}>
+                    <div className="flex items-center gap-4" style={{ flexShrink: 0 }}>
+                      <div style={{ display: 'contents' }}>
+                        <svg width="24" height="24" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: 'rgb(255, 204, 0)', width: '24px', height: '24px' }}>
+                          <path d="M18.819 13.329l-5.324 5.99a2 2 0 01-2.99 0l-5.324-5.99a2 2 0 010-2.658l5.324-5.99a2 2 0 012.99 0l5.324 5.99a2 2 0 010 2.658z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path>
+                        </svg>
+                      </div>
+                      <p
+                        className="text-white uppercase whitespace-nowrap"
+                        style={{
+                          fontFamily: '"Sora", "Sora Placeholder", sans-serif',
+                          fontSize: '20px',
+                          fontWeight: 600,
+                          textTransform: 'uppercase'
+                        }}
+                      >
+                        Reserve Your Spot
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Link>
+        </div>
+
+        {/* Partners Section */}
+        <motion.div
+          className="mb-16 mt-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+        >
+          {/* Partners Title */}
+          {/*<div className="text-center mb-8">
+            <h2
+              className="text-white uppercase font-medium"
+              style={{
+                fontFamily: '"Sora", "Sora Placeholder", sans-serif',
+                fontSize: 'clamp(20px, 5vw, 28px)',
+                fontWeight: 500,
+                letterSpacing: '-0.02em',
+                lineHeight: '1em'
+              }}
+            >
+              Our Partners
+            </h2>
+          </div>
+
+<div 
+            className="relative overflow-hidden"
+            style={{
+              maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)'
+            }}
+          >
+            <div
+              className="flex items-center"
               style={{
                 display: 'flex',
                 width: '100%',
-                height: '100%',
+                height: '100px',
                 maxWidth: '100%',
                 maxHeight: '100%',
                 placeItems: 'center',
                 margin: '0px',
-                padding: '0px',
+                padding: '10px',
                 listStyleType: 'none',
-                gap: '40px',
-                position: 'relative',
-                flexDirection: 'row',
-                willChange: 'transform'
+                opacity: 1,
+                overflow: 'hidden'
               }}
             >
-              {[...Array(10)].map((_, index) => (
-                <li key={index} style={{ flexShrink: 0 }}>
-                  <div className="flex items-center gap-4" style={{ flexShrink: 0 }}>
-                    <div style={{ display: 'contents' }}>
-                      <svg width="24" height="24" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: 'rgb(255, 204, 0)', width: '24px', height: '24px' }}>
-                        <path d="M18.819 13.329l-5.324 5.99a2 2 0 01-2.99 0l-5.324-5.99a2 2 0 010-2.658l5.324-5.99a2 2 0 012.99 0l5.324 5.99a2 2 0 010 2.658z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path>
-                      </svg>
-                    </div>
-                    <p
-                      className="text-white uppercase whitespace-nowrap"
+              <ul
+                className="animate-marquee-partners"
+                style={{
+                  display: 'flex',
+                  width: '100%',
+                  height: '100%',
+                  maxWidth: '100%',
+                  maxHeight: '100%',
+                  placeItems: 'center',
+                  margin: '0px',
+                  padding: '0px',
+                  listStyleType: 'none',
+                  gap: '60px',
+                  position: 'relative',
+                  flexDirection: 'row',
+                  willChange: 'transform'
+                }}
+              >
+                {[
+                  { name: 'Technopark', bg: 'white' },
+                  { name: 'Kerala IT Mission', bg: 'white' },
+                  { name: 'MakeMyPass', bg: 'white' },
+                  { name: 'UDS', bg: 'white' },
+                  { name: 'GTech', bg: 'white' },
+                  { name: 'Startup Mission', bg: 'white' },
+                  { name: 'Partner 7', bg: 'white' }
+                ].map((partner, index) => (
+                  <li key={index} style={{ flexShrink: 0 }}>
+                    <div
+                      className="flex items-center justify-center"
                       style={{
-                        fontFamily: '"Sora", "Sora Placeholder", sans-serif',
-                        fontSize: '20px',
-                        fontWeight: 600,
-                        textTransform: 'uppercase'
+                        backgroundColor: partner.bg,
+                        flexShrink: 0,
+                        borderRadius: '8px',
+                        opacity: 1,
+                        width: '120px',
+                        height: '60px',
+                        padding: '10px'
                       }}
                     >
-                      Reserve Your Spot
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+                      <span
+                        style={{
+                          fontFamily: '"Sora", "Sora Placeholder", sans-serif',
+                          fontSize: '12px',
+                          fontWeight: 600,
+                          color: '#333',
+                          textAlign: 'center'
+                        }}
+                      >
+                        {partner.name}
+                      </span>
+                    </div>
+                  </li>
+                ))}
+                
+                {[
+                  { name: 'Technopark', bg: 'white' },
+                  { name: 'Kerala IT Mission', bg: 'white' },
+                  { name: 'MakeMyPass', bg: 'white' },
+                  { name: 'UDS', bg: 'white' },
+                  { name: 'GTech', bg: 'white' },
+                  { name: 'Startup Mission', bg: 'white' },
+                  { name: 'Partner 7', bg: 'white' }
+                ].map((partner, index) => (
+                  <li key={`duplicate-${index}`} style={{ flexShrink: 0 }}>
+                    <div
+                      className="flex items-center justify-center"
+                      style={{
+                        backgroundColor: partner.bg,
+                        flexShrink: 0,
+                        borderRadius: '8px',
+                        opacity: 1,
+                        width: '120px',
+                        height: '60px',
+                        padding: '10px'
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontFamily: '"Sora", "Sora Placeholder", sans-serif',
+                          fontSize: '12px',
+                          fontWeight: 600,
+                          color: '#333',
+                          textAlign: 'center'
+                        }}
+                      >
+                        {partner.name}
+                      </span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div> */}
+          
+        </motion.div>
 
+        
       </div>
     </section>
   );
