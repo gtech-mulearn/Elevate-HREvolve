@@ -1,8 +1,95 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { fetchPartnersFromGoogleSheets, Partner, getPartnerImageUrls, getFallbackPartnerImage } from '../../lib/partnersData';
+
+// Robust Partner Logo Component (same as events system)
+interface PartnerLogoProps {
+  partner: Partner;
+}
+
+function PartnerLogo({ partner }: PartnerLogoProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imageUrls] = useState(() => getPartnerImageUrls(partner.logo));
+
+  const handleImageError = () => {
+    if (currentImageIndex < imageUrls.length - 1) {
+      setCurrentImageIndex(prev => prev + 1);
+    }
+  };
+
+  const currentImageUrl = currentImageIndex < imageUrls.length 
+    ? imageUrls[currentImageIndex] 
+    : getFallbackPartnerImage();
+
+
+
+  return (
+    <li style={{ flexShrink: 0 }}>
+      <div
+        className="hover:scale-105 transition-transform duration-300 overflow-hidden"
+        style={{
+          flexShrink: 0,
+          opacity: 1,
+          width: '140px',
+          height: '70px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '4px',
+        }}
+      >
+        <img
+          src={currentImageUrl}
+          alt={`${partner.name} logo`}
+          onError={handleImageError}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+            objectPosition: 'center',
+          }}
+        />
+      </div>
+    </li>
+  );
+}
 
 export default function Agenda() {
+  const [partners, setPartners] = useState<Partner[]>([]);
+  const [partnersLoading, setPartnersLoading] = useState(true);
+
+  // Fetch partners data on component mount
+  useEffect(() => {
+    const loadPartners = async (forceRefresh = false) => {
+      try {
+        setPartnersLoading(true);
+        
+        const partnersData = await fetchPartnersFromGoogleSheets(forceRefresh);
+        setPartners(partnersData);
+      } catch (error) {
+        console.error('Failed to load partners:', error);
+        // Don't crash the component, just log the error
+        // Fallback partners will be returned by the fetch function
+      } finally {
+        setPartnersLoading(false);
+      }
+    };
+
+    // Check if page was hard refreshed (F5 or Ctrl+F5)
+    const wasHardRefresh = typeof window !== 'undefined' && 
+      window.performance && 
+      window.performance.navigation && 
+      window.performance.navigation.type === 1; // TYPE_RELOAD
+    
+    if (wasHardRefresh) {
+      loadPartners(true); // Force refresh on F5
+    } else {
+      loadPartners();
+    }
+  }, []);
   const scheduleItems = [
     {
       activity: 'Welcome Address',
@@ -23,14 +110,8 @@ export default function Agenda() {
       type: 'keynote'
     },
     {
-      activity: 'Session 1',
-      speakers: '(Yet to be decided)',
-      topic: '(Yet to be decided)',
-      type: 'session'
-    },
-    {
       activity: 'Power Talk 1',
-      speakers: 'Sreejith Krishnan (Yet to Confirm)\nDirector – Learning & Development, Sony India',
+      speakers: '(Yet to be decided)',
       topic: 'Learning Rewired: The Skill-Shelf-Life Crisis Management',
       type: 'session'
     },
@@ -280,15 +361,14 @@ export default function Agenda() {
         </div>
 
         {/* Partners Section */}
-        <motion.div
+        {/* <motion.div
           className="mb-16 mt-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
-          {/* Partners Title */}
-          {/*<div className="text-center mb-8">
+          <div className="text-center mb-8">
             <h2
               className="text-white uppercase font-medium"
               style={{
@@ -343,26 +423,15 @@ export default function Agenda() {
                   willChange: 'transform'
                 }}
               >
-                {[
-                  { name: 'Technopark', bg: 'white' },
-                  { name: 'Kerala IT Mission', bg: 'white' },
-                  { name: 'MakeMyPass', bg: 'white' },
-                  { name: 'UDS', bg: 'white' },
-                  { name: 'GTech', bg: 'white' },
-                  { name: 'Startup Mission', bg: 'white' },
-                  { name: 'Partner 7', bg: 'white' }
-                ].map((partner, index) => (
-                  <li key={index} style={{ flexShrink: 0 }}>
+                {partnersLoading ? (
+                  <li style={{ flexShrink: 0 }}>
                     <div
-                      className="flex items-center justify-center"
+                      className="flex items-center justify-center bg-white rounded-lg p-3"
                       style={{
-                        backgroundColor: partner.bg,
                         flexShrink: 0,
-                        borderRadius: '8px',
                         opacity: 1,
-                        width: '120px',
-                        height: '60px',
-                        padding: '10px'
+                        width: '140px',
+                        height: '70px'
                       }}
                     >
                       <span
@@ -370,57 +439,36 @@ export default function Agenda() {
                           fontFamily: '"Sora", "Sora Placeholder", sans-serif',
                           fontSize: '12px',
                           fontWeight: 600,
-                          color: '#333',
+                          color: '#666',
                           textAlign: 'center'
                         }}
                       >
-                        {partner.name}
+                        Loading...
                       </span>
                     </div>
                   </li>
-                ))}
-                
-                {[
-                  { name: 'Technopark', bg: 'white' },
-                  { name: 'Kerala IT Mission', bg: 'white' },
-                  { name: 'MakeMyPass', bg: 'white' },
-                  { name: 'UDS', bg: 'white' },
-                  { name: 'GTech', bg: 'white' },
-                  { name: 'Startup Mission', bg: 'white' },
-                  { name: 'Partner 7', bg: 'white' }
-                ].map((partner, index) => (
-                  <li key={`duplicate-${index}`} style={{ flexShrink: 0 }}>
-                    <div
-                      className="flex items-center justify-center"
-                      style={{
-                        backgroundColor: partner.bg,
-                        flexShrink: 0,
-                        borderRadius: '8px',
-                        opacity: 1,
-                        width: '120px',
-                        height: '60px',
-                        padding: '10px'
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: '"Sora", "Sora Placeholder", sans-serif',
-                          fontSize: '12px',
-                          fontWeight: 600,
-                          color: '#333',
-                          textAlign: 'center'
-                        }}
-                      >
-                        {partner.name}
-                      </span>
-                    </div>
-                  </li>
-                ))}
+                ) : (
+                  <>
+                    {partners.map((partner: Partner, index: number) => (
+                      <PartnerLogo 
+                        key={index} 
+                        partner={partner}
+                      />
+                    ))}
+                    
+                    {partners.map((partner: Partner, index: number) => (
+                      <PartnerLogo 
+                        key={`duplicate-${index}`} 
+                        partner={partner}
+                      />
+                    ))}
+                  </>
+                )}
               </ul>
             </div>
-          </div> */}
+          </div>
           
-        </motion.div>
+        </motion.div> */}
 
         
       </div>

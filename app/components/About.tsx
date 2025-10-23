@@ -20,25 +20,7 @@ export default function About() {
             </a>
             &nbsp; is vibrant voluntary community for HR professionals and enthusiasts dedicated to reshaping 
             the future of human resources at Technopark. This forum is exclusively initiated for HR 
-            professionals in Technopark, under the umbrella of &nbsp;
-            <a 
-              href="https://gtechindia.org/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              GTech
-            </a>
-            &nbsp; and &nbsp;
-            <a 
-              href="https://mulearn.org/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              MuLearn
-            </a>
-            . The community meets every third Thursday in-person at Park Centre, Technopark and hosts 
+            professionals in Technopark.The community meets every third Thursday in-person at Park Centre, Technopark and hosts 
             interactive, expert-led sessions that tackle evolving HR challenges and opportunities. This 
             platform encourages networking, learning, collaboration and open dialogue, allowing members 
             to exchange ideas and insights on the latest industry trends. With a focus on networking and 
