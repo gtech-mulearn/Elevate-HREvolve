@@ -361,7 +361,7 @@ export default function Agenda() {
         </div>
 
         {/* Partners Section */}
-        {/* <motion.div
+        <motion.div
           className="mb-16 mt-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -468,7 +468,7 @@ export default function Agenda() {
             </div>
           </div>
           
-        </motion.div> */}
+        </motion.div>
 
         
       </div>
