@@ -125,5 +125,10 @@ body {
 }
 
 .animate-marquee-partners {
-  animation: marquee-partners 25s linear infinite;
+  animation: marquee-partners 15s linear infinite;
+}
+
+.partners-container {
+  display: flex;
+  width: max-content;
 }

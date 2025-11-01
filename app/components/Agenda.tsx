@@ -20,8 +20,8 @@ function PartnerLogo({ partner }: PartnerLogoProps) {
     }
   };
 
-  const currentImageUrl = currentImageIndex < imageUrls.length 
-    ? imageUrls[currentImageIndex] 
+  const currentImageUrl = currentImageIndex < imageUrls.length
+    ? imageUrls[currentImageIndex]
     : getFallbackPartnerImage();
 
 
@@ -66,7 +66,7 @@ export default function Agenda() {
     const loadPartners = async (forceRefresh = false) => {
       try {
         setPartnersLoading(true);
-        
+
         const partnersData = await fetchPartnersFromGoogleSheets(forceRefresh);
         setPartners(partnersData);
       } catch (error) {
@@ -79,11 +79,11 @@ export default function Agenda() {
     };
 
     // Check if page was hard refreshed (F5 or Ctrl+F5)
-    const wasHardRefresh = typeof window !== 'undefined' && 
-      window.performance && 
-      window.performance.navigation && 
+    const wasHardRefresh = typeof window !== 'undefined' &&
+      window.performance &&
+      window.performance.navigation &&
       window.performance.navigation.type === 1; // TYPE_RELOAD
-    
+
     if (wasHardRefresh) {
       loadPartners(true); // Force refresh on F5
     } else {
@@ -383,7 +383,7 @@ export default function Agenda() {
             </h2>
           </div>
 
-<div 
+          <div
             className="relative overflow-hidden"
             style={{
               maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)'
@@ -405,72 +405,94 @@ export default function Agenda() {
                 overflow: 'hidden'
               }}
             >
-              <ul
-                className="animate-marquee-partners"
-                style={{
-                  display: 'flex',
-                  width: '100%',
-                  height: '100%',
-                  maxWidth: '100%',
-                  maxHeight: '100%',
-                  placeItems: 'center',
-                  margin: '0px',
-                  padding: '0px',
-                  listStyleType: 'none',
-                  gap: '60px',
-                  position: 'relative',
-                  flexDirection: 'row',
-                  willChange: 'transform'
-                }}
-              >
-                {partnersLoading ? (
-                  <li style={{ flexShrink: 0 }}>
-                    <div
-                      className="flex items-center justify-center bg-white rounded-lg p-3"
-                      style={{
-                        flexShrink: 0,
-                        opacity: 1,
-                        width: '140px',
-                        height: '70px'
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: '"Sora", "Sora Placeholder", sans-serif',
-                          fontSize: '12px',
-                          fontWeight: 600,
-                          color: '#666',
-                          textAlign: 'center'
-                        }}
-                      >
-                        Loading...
-                      </span>
-                    </div>
-                  </li>
-                ) : (
-                  <>
-                    {partners.map((partner: Partner, index: number) => (
-                      <PartnerLogo 
-                        key={index} 
-                        partner={partner}
-                      />
-                    ))}
-                    
-                    {partners.map((partner: Partner, index: number) => (
-                      <PartnerLogo 
-                        key={`duplicate-${index}`} 
-                        partner={partner}
-                      />
-                    ))}
-                  </>
-                )}
-              </ul>
+              <div className="partners-container animate-marquee-partners">
+                {/* First set */}
+                <ul
+                  style={{
+                    display: 'flex',
+                    width: 'max-content',
+                    height: '100%',
+                    placeItems: 'center',
+                    margin: '0px',
+                    padding: '0px',
+                    listStyleType: 'none',
+                    gap: '60px',
+                    position: 'relative',
+                    flexDirection: 'row',
+                    willChange: 'transform'
+                  }}
+                >
+                  {partnersLoading ? (
+                    <>
+                      {[...Array(6)].map((_, i) => (
+                        <li key={`loading-${i}`} style={{ flexShrink: 0 }}>
+                          <div
+                            className="flex items-center justify-center bg-white rounded-lg p-3"
+                            style={{
+                              flexShrink: 0,
+                              opacity: 1,
+                              width: '140px',
+                              height: '70px'
+                            }}
+                          >
+                            <span
+                              style={{
+                                fontFamily: '"Sora", "Sora Placeholder", sans-serif',
+                                fontSize: '12px',
+                                fontWeight: 600,
+                                color: '#666',
+                                textAlign: 'center'
+                              }}
+                            >
+                              Loading...
+                            </span>
+                          </div>
+                        </li>
+                      ))}
+                    </>
+                  ) : (
+                    <>
+                      {partners.map((partner: Partner, index: number) => (
+                        <PartnerLogo
+                          key={`set1-${index}`}
+                          partner={partner}
+                        />
+                      ))}
+                    </>
+                  )}
+                </ul>
+                
+                {/* Second set for seamless looping */}
+                <ul
+                  style={{
+                    display: 'flex',
+                    width: 'max-content',
+                    height: '100%',
+                    placeItems: 'center',
+                    margin: '0px',
+                    padding: '0px',
+                    listStyleType: 'none',
+                    gap: '60px',
+                    position: 'relative',
+                    flexDirection: 'row',
+                    willChange: 'transform',
+                    marginLeft: '60px'
+                  }}
+                >
+                  {!partnersLoading && partners.map((partner: Partner, index: number) => (
+                    <PartnerLogo
+                      key={`set2-${index}`}
+                      partner={partner}
+                    />
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-          
+
         </motion.div>
 
-        
+
       </div>
     </section>
   );
